@@ -3,15 +3,18 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/my-portfolio/', // Must exactly match your GitHub repository name
+  base: '/my-portfolio/',  // Ensure this exactly matches your repo name
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
+    // Ensure assets use relative paths
+    assetsInlineLimit: 0,
+    cssCodeSplit: false, // Generate a single CSS file
     rollupOptions: {
       output: {
-        // Adding publicPath to ensure assets are loaded correctly
-        // This is a backup approach
-        manualChunks: undefined
+        // Force clean URLs
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name].[ext]'
       }
     }
   }
