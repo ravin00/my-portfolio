@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <!-- Change relative paths to absolute paths that respect the base URL -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Keep external resources as absolute URLs -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +16,7 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./src/main.jsx"></script>
+    <!-- Use the proper Vite module path -->
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
