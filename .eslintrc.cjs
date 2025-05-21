@@ -1,4 +1,9 @@
 module.exports = {
+   basePath: '/my-portfolio',
+  assetPrefix: '/my-portfolio',
+  images: {
+    unoptimized: true,
+  },
   root: true,
   env: { browser: true, es2020: true },
   extends: [
