@@ -34,7 +34,9 @@ export const Projects = () => {
 
               <div className="flex justify-between items-center">
                 <a
-                  href="#"
+                  href="https://github.com/VoidEngineers/Academic_Scheduler"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
                   View Project →
@@ -71,7 +73,9 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center">
                 <a
-                  href="#"
+                  href="https://github.com/VoidEngineers/SkillHive-POC"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
                   View Project →
@@ -112,6 +116,8 @@ export const Projects = () => {
               <div className="flex justify-between items-center">
                 <a
                   href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
                   View Project →
@@ -151,6 +157,8 @@ export const Projects = () => {
               <div className="flex justify-between items-center ">
                 <a
                   href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
                   View Project →
