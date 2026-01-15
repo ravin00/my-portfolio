@@ -1,4 +1,4 @@
-# Personal Portfolio
+<!-- # Personal Portfolio
 
 This repository contains a beautiful, responsive personal portfolio built using **React**, **Vite**, and **TailwindCSS**. The project showcases modern web development techniques including smooth animations, responsive layouts, and interactive UI components.
 
@@ -97,4 +97,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-Happy coding and enjoy building your professional portfolio!
+Happy coding and enjoy building your professional portfolio! -->
