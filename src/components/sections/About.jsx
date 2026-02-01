@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { RevealOnScroll } from "../RevealOnScroll";
 
 export const About = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
@@ -85,7 +86,43 @@ export const About = () => {
     }
   ];
 
-  // ...getSkillClasses and getCategoryClasses unchanged...
+  const getSkillClasses = (category, skillIndex, isHovered) => {
+    const baseClasses = "px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 cursor-default";
+    const colorMap = {
+      blue: isHovered
+        ? "bg-blue-500 text-white shadow-lg shadow-blue-500/50 scale-110"
+        : "bg-blue-500/20 text-blue-300 hover:bg-blue-500/40",
+      green: isHovered
+        ? "bg-green-500 text-white shadow-lg shadow-green-500/50 scale-110"
+        : "bg-green-500/20 text-green-300 hover:bg-green-500/40",
+      purple: isHovered
+        ? "bg-purple-500 text-white shadow-lg shadow-purple-500/50 scale-110"
+        : "bg-purple-500/20 text-purple-300 hover:bg-purple-500/40",
+      orange: isHovered
+        ? "bg-orange-500 text-white shadow-lg shadow-orange-500/50 scale-110"
+        : "bg-orange-500/20 text-orange-300 hover:bg-orange-500/40"
+    };
+    return `${baseClasses} ${colorMap[category.color] || colorMap.blue}`;
+  };
+
+  const getCategoryClasses = (category, categoryIndex, isActive) => {
+    const baseClasses = "p-6 rounded-xl border transition-all duration-500 transform";
+    const colorMap = {
+      blue: isActive
+        ? "bg-blue-900/40 border-blue-500/60 shadow-xl shadow-blue-500/20 scale-105"
+        : "bg-white/5 border-white/10 hover:border-blue-500/40",
+      green: isActive
+        ? "bg-green-900/40 border-green-500/60 shadow-xl shadow-green-500/20 scale-105"
+        : "bg-white/5 border-white/10 hover:border-green-500/40",
+      purple: isActive
+        ? "bg-purple-900/40 border-purple-500/60 shadow-xl shadow-purple-500/20 scale-105"
+        : "bg-white/5 border-white/10 hover:border-purple-500/40",
+      orange: isActive
+        ? "bg-orange-900/40 border-orange-500/60 shadow-xl shadow-orange-500/20 scale-105"
+        : "bg-white/5 border-white/10 hover:border-orange-500/40"
+    };
+    return `${baseClasses} ${colorMap[category.color] || colorMap.blue}`;
+  };
 
   return (
     <section
