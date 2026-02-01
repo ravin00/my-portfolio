@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export const About = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
   const [activeCategory, setActiveCategory] = useState(null);
