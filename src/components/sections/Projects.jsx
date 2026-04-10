@@ -1,5 +1,5 @@
-import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
+import { useMemo, useState } from "react";
 import { FaArrowUpRightFromSquare, FaGithub } from "react-icons/fa6";
 import { RevealOnScroll } from "../RevealOnScroll";
 
@@ -176,11 +176,10 @@ export const Projects = () => {
                                 key={chip}
                                 type="button"
                                 onClick={() => setActiveFilter(chip)}
-                                className={`px-4 py-2 rounded-full text-sm border transition ${
-                                    activeFilter === chip
+                                className={`px-4 py-2 rounded-full text-sm border transition ${activeFilter === chip
                                         ? "bg-purple-100 border-purple-200 text-purple-700"
                                         : "bg-white border-gray-200 text-gray-600 hover:border-purple-200"
-                                }`}
+                                    }`}
                             >
                                 {chip}
                             </button>

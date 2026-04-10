@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { FaAws, FaDocker, FaGithub, FaLinkedin, FaPlay, FaRocket, FaTerminal } from "react-icons/fa";
-import { SiDotnet, SiKubernetes, SiReact, SiSpringboot, SiTerraform, SiTypescript,SiJavascript } from "react-icons/si";
+import { FaDocker, FaGithub, FaLinkedin, FaPlay, FaRocket, FaTerminal } from "react-icons/fa";
+import { SiDotnet, SiJavascript, SiKubernetes, SiReact, SiSpringboot, SiTypescript } from "react-icons/si";
 import { RevealOnScroll } from "../RevealOnScroll";
 
 export const Home = () => {

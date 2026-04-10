@@ -1,6 +1,6 @@
 import emailjs from "emailjs-com";
 import { useState } from "react";
-import { FaCheckCircle, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaTimesCircle,} from "react-icons/fa";
+import { FaCheckCircle, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaTimesCircle, } from "react-icons/fa";
 import { RevealOnScroll } from "../RevealOnScroll";
 
 export const Contact = () => {

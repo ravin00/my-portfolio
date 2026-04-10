@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { FaBars, FaCoffee, FaGithub, FaLinkedin, FaRocket } from "react-icons/fa";
+import { FaBars, FaGithub, FaLinkedin, FaRocket } from "react-icons/fa";
 
 export const Navbar = ({ menuOpen, setMenuOpen }) => {
   useEffect(() => {
