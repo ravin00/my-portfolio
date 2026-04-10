@@ -112,7 +112,7 @@ export const Contact = () => {
                             </div> */}
 
                             {/* Fun Stats */}
-                            <div className="cartoon-card p-6 bg-gradient-to-r from-yellow-50 to-orange-50">
+                            {/* <div className="cartoon-card p-6 bg-gradient-to-r from-yellow-50 to-orange-50">
                                 <h3 className="font-funky text-lg font-bold text-gray-800 mb-4">Fun Stats</h3>
                                 <div className="grid grid-cols-3 gap-4 text-center">
                                     <div>
@@ -131,7 +131,7 @@ export const Contact = () => {
                                         <p className="text-sm text-gray-600">Bugs Fixed</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                         {/* Right - Contact Form */}

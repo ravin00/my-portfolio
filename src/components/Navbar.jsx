@@ -33,9 +33,8 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
               <FaGithub className="inline mr-2" />
               Projects
             </a>
-            <a href="https://buymeacoffee.com" target="_blank" rel="noopener noreferrer" className="sticker hover:bg-amber-200">
-              <FaCoffee className="inline mr-2 text-amber-600" />
-              Buy Coffee
+            <a href="#github-live" className="sticker hover:bg-purple-100">
+              Recent Work
             </a>
           </div>
 

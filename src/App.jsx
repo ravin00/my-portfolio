@@ -5,6 +5,7 @@ import { MobileMenu } from "./components/MobileMenu";
 import { Navbar } from "./components/Navbar";
 import { About } from "./components/sections/About";
 import { Contact } from "./components/sections/Contact";
+import { GitHubActivity } from "./components/sections/GitHubActivity";
 import { Home } from "./components/sections/Home";
 import { Projects } from "./components/sections/Projects";
 import "./index.css";
@@ -46,6 +47,7 @@ function App() {
         <Home />
         <About />
         <Projects />
+        <GitHubActivity />
         <Contact />
       </div>
     </>

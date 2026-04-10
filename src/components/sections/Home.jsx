@@ -54,8 +54,8 @@ export const Home = () => {
     { name: "Javascript", icon: SiJavascript, color: "text-yellow-400", bg: "bg-yellow-100" },
     { name: "Docker", icon: FaDocker, color: "text-blue-500", bg: "bg-blue-100" },
     { name: "Kubernetes", icon: SiKubernetes, color: "text-blue-600", bg: "bg-blue-100" },
-    { name: "AWS", icon: FaAws, color: "text-orange-500", bg: "bg-orange-100" },
-    { name: "Terraform", icon: SiTerraform, color: "text-purple-500", bg: "bg-purple-100" },
+    // { name: "AWS", icon: FaAws, color: "text-orange-500", bg: "bg-orange-100" },
+    // { name: "Terraform", icon: SiTerraform, color: "text-purple-500", bg: "bg-purple-100" },
   ], []);
 
   // Rotate active skill for spotlight effect

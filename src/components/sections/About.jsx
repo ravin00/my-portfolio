@@ -1,13 +1,9 @@
-import { useState } from "react";
-import { FaAws, FaBook, FaBriefcase, FaCloud, FaCode, FaCoffee, FaDocker, FaFigma, FaFlag, FaGamepad, FaGitAlt, FaGraduationCap, FaHeart, FaJira, FaJs, FaLinux, FaMusic, FaNodeJs, FaPlane, FaPython, FaReact, FaServer, FaTerminal, FaTools } from "react-icons/fa";
+import { FaAws, FaBriefcase, FaCloud, FaCode, FaDocker, FaFigma, FaFlag, FaGitAlt, FaGraduationCap, FaHeart, FaJira, FaJs, FaLinux, FaNodeJs, FaPython, FaReact, FaServer, FaTerminal, FaTools } from "react-icons/fa";
 import { SiArgo, SiDotnet, SiExpress, SiFastapi, SiGithubactions, SiGrafana, SiHelm, SiJfrog, SiKubernetes, SiMongodb, SiMysql, SiPostgresql, SiPrometheus, SiSharp, SiSpringboot, SiTailwindcss, SiTerraform, SiTypescript } from "react-icons/si";
 import ravinPhoto from "../../assets/WhatsApp Image 2026-02-02 at 03.44.56.jpeg";
 import { RevealOnScroll } from "../RevealOnScroll";
 
 export const About = () => {
-  const [flippedCard, setFlippedCard] = useState(null);
-  const [funFact, setFunFact] = useState(null);
-  const [clickCounts, setClickCounts] = useState({ Gaming: 0, Music: 0, Travel: 0, Coffee: 0, Learning: 0 });
   // Main tools I love to work with
   const mainToolCategories = [
     {
@@ -120,76 +116,6 @@ export const About = () => {
     }
   ];
 
-  const interests = [
-    {
-      name: "Gaming",
-      icon: FaGamepad,
-      color: "bg-purple-100",
-      gradient: "from-purple-500 to-indigo-600",
-      level: 85,
-      backText: "I can speedrun debugging faster than any boss fight!",
-      emoji: "🎮"
-    },
-    {
-      name: "Music",
-      icon: FaMusic,
-      color: "bg-pink-100",
-      gradient: "from-pink-500 to-rose-600",
-      level: 70,
-      backText: "My code has rhythm — usually in 4/4 time signature",
-      emoji: "🎵"
-    },
-    {
-      name: "Travel",
-      icon: FaPlane,
-      color: "bg-blue-100",
-      gradient: "from-blue-500 to-cyan-600",
-      level: 60,
-      backText: "Dreaming of coding from beaches worldwide (with stable WiFi)",
-      emoji: "✈️"
-    },
-    {
-      name: "Coffee",
-      icon: FaCoffee,
-      color: "bg-amber-100",
-      gradient: "from-amber-500 to-orange-600",
-      level: 100,
-      backText: "My blood type is espresso. Error rate drops 50% after first cup.",
-      emoji: "☕"
-    },
-    {
-      name: "Learning",
-      icon: FaBook,
-      color: "bg-green-100",
-      gradient: "from-green-500 to-teal-600",
-      level: 95,
-      backText: "Currently learning: Everything I don't know yet (it's a long list)",
-      emoji: "📚"
-    },
-  ];
-
-  const funFactsList = [
-    { text: "I debug code faster than I debug my life choices", emoji: "🐛" },
-    { text: "My git commit messages are funnier than my jokes", emoji: "😂" },
-    { text: "I speak fluent JavaScript and sarcasm", emoji: "💬" },
-    { text: "Tabs > Spaces (this is a hill I'll die on)", emoji: "⌨️" },
-    { text: "I once fixed a production bug while half asleep", emoji: "😴" },
-    { text: "My rubber duck is my most trusted code reviewer", emoji: "🦆" },
-    { text: "I've mass-produced more coffee than code some days", emoji: "☕" },
-    { text: "My playlist: 50% Lo-fi, 50% keyboard ASMR", emoji: "🎧" },
-  ];
-
-  const handleCardClick = (name) => {
-    setFlippedCard(flippedCard === name ? null : name);
-    setClickCounts(prev => ({ ...prev, [name]: prev[name] + 1 }));
-  };
-
-  const getRandomFunFact = () => {
-    const randomFact = funFactsList[Math.floor(Math.random() * funFactsList.length)];
-    setFunFact(randomFact);
-    setTimeout(() => setFunFact(null), 4000);
-  };
-
   const funFacts = [
     "I debug code faster than I debug my life choices 🐛",
     "My git commit messages are funnier than my jokes 😂",
@@ -206,9 +132,6 @@ export const About = () => {
             <h2 className="font-heading text-5xl md:text-6xl text-gray-800 cartoon-text mb-4">
               ABOUT ME
             </h2>
-            <p className="font-funky text-xl text-gray-700">
-              (Warning: May contain traces of caffeine and bad puns)
-            </p>
           </div>
 
           {/* Intro Card */}
@@ -296,110 +219,6 @@ export const About = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Life Outside Coding - Interactive Cards */}
-          <div className="mb-16">
-            <h3 className="font-heading text-4xl text-center text-gray-800 cartoon-text-small mb-4">
-              WHEN I'M NOT CODING...
-            </h3>
-            <p className="text-center font-body text-gray-500 mb-8">
-              (Click the cards to flip them!)
-            </p>
-
-            {/* Interactive Flip Cards */}
-            <div className="flex flex-wrap justify-center gap-6 mb-8">
-              {interests.map((interest, index) => (
-                <div
-                  key={index}
-                  className="relative w-40 h-48 cursor-pointer group perspective-1000"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                  onClick={() => handleCardClick(interest.name)}
-                >
-                  {/* Card Container with flip effect */}
-                  <div
-                    className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${flippedCard === interest.name ? 'rotate-y-180' : ''
-                      }`}
-                    style={{
-                      transformStyle: 'preserve-3d',
-                      transform: flippedCard === interest.name ? 'rotateY(180deg)' : 'rotateY(0deg)',
-                    }}
-                  >
-                    {/* Front of Card */}
-                    <div
-                      className={`absolute inset-0 ${interest.color} rounded-2xl shadow-lg border-4 border-gray-800 flex flex-col items-center justify-center p-4 backface-hidden`}
-                      style={{ backfaceVisibility: 'hidden' }}
-                    >
-                      <div className="text-5xl mb-3 group-hover:scale-125 transition-transform duration-300">
-                        {interest.emoji}
-                      </div>
-                      <interest.icon className="text-3xl text-gray-700 mb-2" />
-                      <span className="font-funky font-bold text-gray-800 text-lg">{interest.name}</span>
-
-                      {/* Skill Level Bar */}
-                      <div className="w-full mt-3">
-                        <div className="flex justify-between text-xs text-gray-600 mb-1">
-                          <span>Level</span>
-                          <span>{interest.level}%</span>
-                        </div>
-                        <div className="h-2 bg-gray-300 rounded-full overflow-hidden">
-                          <div
-                            className={`h-full bg-gradient-to-r ${interest.gradient} rounded-full transition-all duration-1000`}
-                            style={{ width: `${interest.level}%` }}
-                          ></div>
-                        </div>
-                      </div>
-
-                      {/* Click counter badge */}
-                      {clickCounts[interest.name] > 0 && (
-                        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-6 h-6 rounded-full flex items-center justify-center font-mono animate-bounce">
-                          {clickCounts[interest.name]}
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Back of Card */}
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-br ${interest.gradient} rounded-2xl shadow-lg border-4 border-gray-800 flex flex-col items-center justify-center p-4 text-white`}
-                      style={{
-                        backfaceVisibility: 'hidden',
-                        transform: 'rotateY(180deg)',
-                      }}
-                    >
-                      <div className="text-4xl mb-3">{interest.emoji}</div>
-                      <p className="font-body text-sm text-center leading-relaxed">
-                        {interest.backText}
-                      </p>
-                      <div className="mt-3 text-xs opacity-75">
-                        (tap to flip back)
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Stats Row */}
-            <div className="flex justify-center gap-8 mt-8">
-              <div className="text-center">
-                <div className="font-heading text-2xl text-purple-600">
-                  {Object.values(clickCounts).reduce((a, b) => a + b, 0)}
-                </div>
-                <div className="font-body text-xs text-gray-500">Total Clicks</div>
-              </div>
-              <div className="text-center">
-                <div className="font-heading text-2xl text-cyan-600">
-                  {interests.length}
-                </div>
-                <div className="font-body text-xs text-gray-500">Interests</div>
-              </div>
-              <div className="text-center">
-                <div className="font-heading text-2xl text-pink-600">
-                  ∞
-                </div>
-                <div className="font-body text-xs text-gray-500">Curiosity</div>
-              </div>
-            </div>
           </div>
 
           {/* Skills Section - Refactored */}

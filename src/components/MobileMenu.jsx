@@ -50,11 +50,21 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         Projects
       </a>
       <a
-        href="#contact"
+        href="#github-live"
         onClick={() => setMenuOpen(false)}
         className={`cartoon-card bg-white px-8 py-4 my-3 text-xl font-funky font-bold
                     ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         style={{ transitionDelay: menuOpen ? '400ms' : '0ms', transition: 'all 0.5s' }}
+      >
+        <FaCode className="inline mr-3 text-purple-500" />
+        GitHub Live
+      </a>
+      <a
+        href="#contact"
+        onClick={() => setMenuOpen(false)}
+        className={`cartoon-card bg-white px-8 py-4 my-3 text-xl font-funky font-bold
+                    ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        style={{ transitionDelay: menuOpen ? '500ms' : '0ms', transition: 'all 0.5s' }}
       >
         <FaEnvelope className="inline mr-3 text-pink-500" />
         Contact
