@@ -1,268 +1,430 @@
-import { FaAws, FaBriefcase, FaCloud, FaCode, FaDocker, FaFigma, FaFlag, FaGitAlt, FaGraduationCap, FaHeart, FaJira, FaJs, FaLinux, FaNodeJs, FaPython, FaReact, FaServer, FaTerminal, FaTools } from "react-icons/fa";
-import { SiArgo, SiDotnet, SiExpress, SiFastapi, SiGithubactions, SiGrafana, SiHelm, SiJfrog, SiKubernetes, SiMongodb, SiMysql, SiPostgresql, SiPrometheus, SiSharp, SiSpringboot, SiTailwindcss, SiTerraform, SiTypescript } from "react-icons/si";
+import {
+  FaAws,
+  FaDatabase,
+  FaDocker,
+  FaFigma,
+  FaGitAlt,
+  FaJava,
+  FaJira,
+  FaJs,
+  FaLinux,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+  FaTerminal,
+} from "react-icons/fa";
+import {
+  SiArgo,
+  SiDotnet,
+  SiExpress,
+  SiFastapi,
+  SiGithubactions,
+  SiHelm,
+  SiJfrog,
+  SiKubernetes,
+  SiMongodb,
+  SiMysql,
+  SiNextdotjs,
+  SiPostgresql,
+  SiRedis,
+  SiSharp,
+  SiSpringboot,
+  SiStorybook,
+  SiTailwindcss,
+  SiTerraform,
+  SiTypescript,
+} from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
 import ravinPhoto from "../../assets/WhatsApp Image 2026-02-02 at 03.44.56.jpeg";
 import { RevealOnScroll } from "../RevealOnScroll";
 
-export const About = () => {
-  // Main tools I love to work with
-  const mainToolCategories = [
-    {
-      name: 'The "Fluent" Zone',
-      subtitle: "Languages",
-      icon: FaCode,
-      color: "from-cyan-400 to-blue-500",
-      skills: [
-        { name: "C#", icon: SiSharp, color: "text-purple-600", joke: "My comfort blanket" },
-        { name: "TypeScript", icon: SiTypescript, color: "text-blue-600", joke: "JS, but with trust issues" },
-        { name: "JavaScript", icon: FaJs, color: "text-yellow-500", joke: "For the thrill of undefined" },
-        { name: "Linux", icon: FaLinux, color: "text-gray-800", joke: "Sudo make me a sandwich" },
-      ]
-    },
-    {
-      name: 'The "Heavy Lifters"',
-      subtitle: "Frameworks",
-      icon: FaServer,
-      color: "from-green-400 to-teal-500",
-      skills: [
-        { name: ".NET", icon: SiDotnet, color: "text-purple-600", joke: "Old reliable" },
-        { name: "React", icon: FaReact, color: "text-cyan-500", joke: "Hooks > Classes, fight me" },
-        { name: "Spring Boot", icon: SiSpringboot, color: "text-green-500", joke: "Yes, I do Java too" },
-      ]
-    },
-    {
-      name: 'The "Please Don\'t Crash"',
-      subtitle: "Infra & DevOps",
-      icon: FaCloud,
-      color: "from-orange-400 to-red-500",
-      skills: [
-        { name: "Docker", icon: FaDocker, color: "text-blue-400", joke: '"But it worked in the container!"' },
-        { name: "Kubernetes", icon: SiKubernetes, color: "text-blue-500", joke: "Orchestrating chaos" },
-        { name: "AWS", icon: FaAws, color: "text-orange-400", joke: "Helping Bezos buy rockets" },
-      ]
-    },
-  ];
+const primaryStack = {
+  Frontend: [
+    { name: "React", Icon: FaReact, color: "#61DAFB" },
+    { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
+    { name: "JavaScript", Icon: FaJs, color: "#F7DF1E" },
+    { name: "Next.js", Icon: SiNextdotjs, color: "#000000" },
+    { name: "Tailwind CSS", Icon: SiTailwindcss, color: "#38BDF8" },
+  ],
+  Backend: [
+    { name: "C#", Icon: SiSharp, color: "#512BD4" },
+    { name: "ASP.NET Core", Icon: SiDotnet, color: "#512BD4" },
+    { name: "Entity Framework Core", Icon: FaDatabase, color: "#512BD4" },
+  ],
+};
 
-  // Other tools I've touched and have experience with
-  const otherTools = [
-    { name: "FastAPI", icon: SiFastapi, color: "text-teal-500" },
-    { name: "Node.js", icon: FaNodeJs, color: "text-green-600" },
-    { name: "Express", icon: SiExpress, color: "text-gray-700" },
-    { name: "Python", icon: FaPython, color: "text-blue-500" },
-    { name: "Tailwind", icon: SiTailwindcss, color: "text-cyan-400" },
-    { name: "Terraform", icon: SiTerraform, color: "text-purple-600" },
-    { name: "GitHub Actions", icon: SiGithubactions, color: "text-gray-700" },
-    { name: "ArgoCD", icon: SiArgo, color: "text-orange-500" },
-    { name: "Helm", icon: SiHelm, color: "text-blue-600" },
-    { name: "Grafana", icon: SiGrafana, color: "text-orange-500" },
-    { name: "Prometheus", icon: SiPrometheus, color: "text-red-500" },
-    { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-600" },
-    { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
-    { name: "MySQL", icon: SiMysql, color: "text-blue-500" },
-    { name: "Git", icon: FaGitAlt, color: "text-orange-600" },
-    { name: "Figma", icon: FaFigma, color: "text-purple-500" },
-    { name: "JIRA", icon: FaJira, color: "text-blue-600" },
-    { name: "JFrog", icon: SiJfrog, color: "text-green-500" },
-    { name: "Shell", icon: FaTerminal, color: "text-gray-700" },
-  ];
+const supportingGroups = [
+  {
+    title: "Cloud & DevOps",
+    items: [
+      { name: "Azure", Icon: VscAzure, color: "#0078D4" },
+      { name: "Docker", Icon: FaDocker, color: "#2496ED" },
+      { name: "Kubernetes", Icon: SiKubernetes, color: "#326CE5" },
+      { name: "GitHub Actions", Icon: SiGithubactions, color: "#2088FF" },
+      { name: "Terraform", Icon: SiTerraform, color: "#7B42BC" },
+      { name: "Helm", Icon: SiHelm, color: "#0F1689" },
+      { name: "ArgoCD", Icon: SiArgo, color: "#EF7B4D" },
+    ],
+  },
+  {
+    title: "Databases",
+    items: [
+      { name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
+      { name: "SQL Server", Icon: FaDatabase, color: "#CC2927" },
+      { name: "Redis", Icon: SiRedis, color: "#DC382D" },
+      { name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
+    ],
+  },
+];
 
-  const experiences = [
-    {
-      role: "Software Engineer Intern",
-      company: "Creative Software",
-      period: "Aug 2024 - Apr 2025",
-      type: "Full-time | Hybrid",
-      highlights: [
-        "Built React frontend for self-service portal with reusable components",
-        "Designed wireframes & prototypes in Figma with UX team",
-        "Developed backend APIs using FastAPI",
-        "GitOps with ArgoCD & Terraform for automated deployments",
-        "Built CI/CD pipelines with GitHub Actions",
-        "Worked with Docker, Kubernetes & Helm Charts",
-      ],
-      color: "from-purple-400 to-pink-400"
-    },
-    {
-      role: "External Junior Software Engineer",
-      company: "Cognite (Oslo, Norway)",
-      period: "Remote",
-      type: "Contract",
-      highlights: [
-        "Contributed to innovative product development",
-        "Collaborated with cross-functional teams",
-        "Delivered high-quality software solutions",
-      ],
-      color: "from-cyan-400 to-blue-400"
-    },
-    {
-      role: "Developer",
-      company: "MS Club of SLIIT",
-      period: "Jun 2024 - Present",
-      type: "Community",
-      highlights: [
-        "Full-Stack Development with Next.js",
-        "Knowledge sharing & mentorship",
-        "Active community contributor",
-      ],
-      color: "from-green-400 to-teal-400"
-    }
-  ];
+const tertiaryGroups = [
+  {
+    title: "Additional experience",
+    items: [
+      { name: "Java", Icon: FaJava, color: "#ED8B00" },
+      { name: "Spring Boot", Icon: SiSpringboot, color: "#6DB33F" },
+      { name: "Python", Icon: FaPython, color: "#3776AB" },
+      { name: "FastAPI", Icon: SiFastapi, color: "#009688" },
+      { name: "Node.js", Icon: FaNodeJs, color: "#339933" },
+      { name: "Express", Icon: SiExpress, color: "#000000" },
+      { name: "MySQL", Icon: SiMysql, color: "#4479A1" },
+      { name: "Bash", Icon: FaTerminal, color: "#4EAA25" },
+    ],
+  },
+  {
+    title: "Tools",
+    items: [
+      { name: "Git", Icon: FaGitAlt, color: "#F05032" },
+      { name: "Linux", Icon: FaLinux, color: "#000000" },
+      { name: "JIRA", Icon: FaJira, color: "#0052CC" },
+      { name: "Figma", Icon: FaFigma, color: "#F24E1E" },
+      { name: "Storybook", Icon: SiStorybook, color: "#FF4785" },
+      { name: "JFrog", Icon: SiJfrog, color: "#41BF47" },
+    ],
+  },
+];
 
-  const education = [
-    {
-      degree: "BSc (Hons) in Information Technology",
-      school: "SLIIT University",
-      period: "2022 - 2026",
-      specialization: "Specialising in Information Technology"
-    }
-  ];
+const experiences = [
+  {
+    role: "Software Engineer Intern",
+    company: "Creative Software",
+    period: "Aug 2024 — Apr 2025",
+    type: "Full-time · Hybrid",
+    groups: [
+      {
+        title: "Frontend Development",
+        items: [
+          "Designed and implemented the frontend for a self-service portal in React, building reusable, scalable components aligned with an internal design system for consistency and maintainability.",
+        ],
+      },
+      {
+        title: "UX & Design Collaboration",
+        items: [
+          "Worked closely with designers and stakeholders in Figma to create wireframes, prototypes and user flows that aligned business objectives with user needs.",
+        ],
+      },
+      {
+        title: "Backend Development",
+        items: [
+          "Contributed to backend services with FastAPI — developing APIs and optimising workflows for seamless integration with the frontend.",
+        ],
+      },
+      {
+        title: "DevOps Exposure",
+        items: [
+          "Assisted the DevOps team and participated in KT sessions to build a strong understanding of modern cloud-native workflows.",
+          "Assisted with GitOps workflows using ArgoCD and Terraform for automated, version-controlled deployments and infrastructure provisioning.",
+          "Contributed to CI/CD pipelines with GitHub Actions to improve release reliability and delivery speed.",
+          "Supported cloud infrastructure tasks on AWS and GCP, including Kubernetes deployments via GitOps pipelines.",
+          "Assisted in automating operational workflows with Python and shell scripting.",
+          "Worked with Docker, Kubernetes and Helm charts to support scalable, containerised deployments.",
+        ],
+      },
+    ],
+    stack: [
+      "React",
+      "FastAPI",
+      "Figma",
+      "GitHub Actions",
+      "GitOps",
+      "ArgoCD",
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "GCP",
+      "Helm",
+      "Python",
+      "Shell",
+      "Git",
+      "JIRA",
+      "JFrog",
+      "Buildpacks",
+      "Backstage",
+      "CI/CD",
+    ],
+  },
+  {
+    role: "External Junior Software Engineer",
+    company: "Cognite — Oslo, Norway",
+    period: "Aug 2024 — Apr 2025",
+    type: "Remote · via Creative Software",
+    highlights: [
+      "Engaged externally through Creative Software as part of a placement with Cognite in Oslo, Norway.",
+      "Contributed to the development and enhancement of Cognite's products in industrial data management and analytics.",
+      "Collaborated with cross-functional teams to deliver high-quality software solutions that drive customer value.",
+    ],
+  },
+  {
+    role: "Developer",
+    company: "MS Club of SLIIT",
+    period: "Jun 2024 — Present",
+    type: "Community",
+    highlights: [
+      "Full-stack development on community projects using Next.js.",
+      "Knowledge sharing, mentoring and active contribution to events.",
+    ],
+  },
+];
 
-  const funFacts = [
-    "I debug code faster than I debug my life choices 🐛",
-    "My git commit messages are funnier than my jokes 😂",
-    "I speak fluent JavaScript and sarcasm 💬",
-    "Tabs > Spaces (fight me) ⌨️",
-  ];
+const education = {
+  degree: "BSc (Hons) in Information Technology",
+  school: "SLIIT — Sri Lanka Institute of Information Technology",
+  period: "2022 — 2026",
+  specialization: "Specialising in Information Technology",
+};
 
+const PrimaryChip = ({ item }) => {
+  const Icon = item.Icon;
   return (
-    <section id="about" className="py-24 relative">
-      <RevealOnScroll>
-        <div className="max-w-6xl mx-auto px-6">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="font-heading text-5xl md:text-6xl text-gray-800 cartoon-text mb-4">
-              ABOUT ME
-            </h2>
-          </div>
+    <span className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-[var(--border-strong)] text-sm font-medium text-[var(--text)] shadow-sm">
+      <Icon className="text-base" style={{ color: item.color }} />
+      {item.name}
+    </span>
+  );
+};
 
-          {/* Intro Card */}
-          <div className="cartoon-card p-8 mb-12 bg-gradient-to-r from-yellow-50 to-orange-50">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              {/* Bio */}
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="font-heading text-3xl text-gray-800 mb-4">
-                  Hey there! I'm Ravin 👋
-                </h3>
-                <p className="font-body text-lg text-gray-700 mb-4">
-                  I am an undergraduate student at SLIIT. When I'm not fighting with the compiler, I'm bridging the gap between development and operations.
-                  I love building things that live on the internet and automating everything I touch!
-                  <span className="block mt-2 text-purple-600 font-bold">
-                    Currently shipping features at weekdays & breaking prod on weekends! 🚀
-                  </span>
+const SupportingChip = ({ item }) => {
+  const Icon = item.Icon;
+  return (
+    <span className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-md bg-[var(--bg-subtle)] border border-[var(--border)] text-sm text-[var(--text-muted)] hover:text-[var(--text)] hover:border-[var(--border-strong)] transition-colors">
+      <Icon className="text-base" style={{ color: item.color }} />
+      {item.name}
+    </span>
+  );
+};
+
+const AdditionalChip = ({ item }) => {
+  const Icon = item.Icon;
+  return (
+    <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-xs text-[var(--text-subtle)] hover:text-[var(--text-muted)] transition-colors">
+      <Icon className="text-xs opacity-70" style={{ color: item.color }} />
+      {item.name}
+    </span>
+  );
+};
+
+export const About = () => {
+  return (
+    <section id="about" className="py-24 sm:py-32">
+      <div className="container-tight">
+        <RevealOnScroll>
+          <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 mb-24">
+            <div>
+              <p className="eyebrow mb-4">About</p>
+              <h2 className="font-display text-4xl sm:text-5xl font-semibold tracking-tight text-[var(--text)] mb-6">
+                Focused on React and ASP.NET Core.
+              </h2>
+              <div className="space-y-4 text-[var(--text-muted)] leading-relaxed">
+                <p>
+                  I'm a Full-Stack Software Engineer specialising in{" "}
+                  <span className="text-[var(--text)] font-medium">React</span> and{" "}
+                  <span className="text-[var(--text)] font-medium">ASP.NET Core</span>.
+                  I design, build, deploy and maintain cloud-native applications
+                  end-to-end.
                 </p>
-                <div className="joke-card inline-block">
-                  <p className="font-body text-gray-800">
-                    "{funFacts[Math.floor(Math.random() * funFacts.length)]}"
+                <p>
+                  My day-to-day is a typed React frontend talking to an ASP.NET
+                  Core API, backed by PostgreSQL or SQL Server, containerised
+                  with Docker and shipped to Kubernetes on Azure through
+                  GitOps pipelines (GitHub Actions, Terraform, ArgoCD).
+                </p>
+                <p>
+                  I care about clarity — in code, in APIs, and in how a system
+                  behaves. I prefer small services with sensible defaults over
+                  clever ones.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="relative overflow-hidden rounded-2xl border border-[var(--border)] aspect-[4/5] max-w-md mx-auto">
+                <img
+                  src={ravinPhoto}
+                  alt="Ravin Bandara"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                />
+              </div>
+              <div className="absolute -bottom-4 -left-4 hidden sm:block">
+                <div className="card-elevated px-4 py-3 bg-white">
+                  <p className="text-xs text-[var(--text-subtle)]">Based in</p>
+                  <p className="text-sm font-medium text-[var(--text)]">
+                    Colombo, Sri Lanka
                   </p>
                 </div>
               </div>
             </div>
           </div>
+        </RevealOnScroll>
 
-          {/* Experience Section - Screenshot Style */}
-          <div className="mb-16">
-            <h3 className="font-heading text-4xl text-center text-gray-800 cartoon-text-small mb-8">
-              <FaBriefcase className="inline mr-3 text-purple-500" />
-              EXPERIENCE
-            </h3>
-            <div className="flex flex-col lg:flex-row gap-8">
-              {/* Photo Side */}
-              <div className="lg:w-2/5 flex justify-center">
-                <div className="relative">
-                  <img
-                    src={ravinPhoto}
-                    alt="Ravin Bandara working"
-                    className="rounded-3xl w-full max-w-md object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                  />
-                </div>
+        <RevealOnScroll stagger>
+          <div className="mb-24">
+            <div className="flex items-end justify-between mb-10">
+              <div>
+                <p className="eyebrow mb-3">Experience</p>
+                <h3 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-[var(--text)]">
+                  Where I've worked
+                </h3>
               </div>
+            </div>
 
-              {/* Timeline Side */}
-              <div className="lg:w-3/5 space-y-6">
-                {experiences.map((exp, index) => (
-                  <div key={index} className="flex gap-4">
-                    {/* Green Bar & Flag */}
-                    <div className="flex flex-col items-center">
-                      <div className="w-8 h-8 bg-green-400 rounded flex items-center justify-center">
-                        <FaFlag className="text-white text-sm" />
-                      </div>
-                      <div className="w-1 flex-1 bg-green-400 mt-1"></div>
-                    </div>
-
-                    {/* Experience Card */}
-                    <div className="flex-1 cartoon-card p-5 bg-white">
-                      <h4 className="font-funky text-xl font-bold text-gray-800">{exp.role}</h4>
-                      <p className="font-funky text-purple-600 font-semibold">{exp.company}</p>
-                      <p className="font-body text-gray-600 mt-2">
-                        {exp.highlights.join(" ")}
-                      </p>
-                    </div>
+            <div className="space-y-6">
+              {experiences.map((exp) => (
+                <div
+                  key={exp.role + exp.company}
+                  data-stagger-item
+                  className="card p-6 sm:p-8 grid md:grid-cols-[220px_1fr] gap-6"
+                >
+                  <div>
+                    <p className="text-xs font-mono text-[var(--text-subtle)] uppercase tracking-wider mb-2">
+                      {exp.period}
+                    </p>
+                    <p className="text-xs text-[var(--text-subtle)]">{exp.type}</p>
                   </div>
-                ))}
+                  <div>
+                    <h4 className="font-display text-lg font-semibold text-[var(--text)]">
+                      {exp.role}
+                    </h4>
+                    <p className="text-sm text-[var(--accent)] font-medium mb-4">
+                      {exp.company}
+                    </p>
+
+                    {exp.groups ? (
+                      <div className="space-y-5">
+                        {exp.groups.map((group) => (
+                          <div key={group.title}>
+                            <p className="text-xs font-mono uppercase tracking-wider text-[var(--text)] mb-2">
+                              {group.title}
+                            </p>
+                            <ul className="space-y-2">
+                              {group.items.map((item, i) => (
+                                <li
+                                  key={i}
+                                  className="text-sm text-[var(--text-muted)] leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-px before:bg-[var(--border-strong)]"
+                                >
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <ul className="space-y-2">
+                        {exp.highlights.map((h, i) => (
+                          <li
+                            key={i}
+                            className="text-sm text-[var(--text-muted)] leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-px before:bg-[var(--border-strong)]"
+                          >
+                            {h}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                    {exp.stack && (
+                      <div className="mt-5 pt-5 border-t border-[var(--border)]">
+                        <p className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)] mb-3">
+                          Stack
+                        </p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {exp.stack.map((tech) => (
+                            <span
+                              key={tech}
+                              className="inline-flex items-center px-2 py-0.5 rounded-md bg-[var(--bg-subtle)] border border-[var(--border)] text-xs font-mono text-[var(--text-muted)]"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+
+        <RevealOnScroll>
+          <div className="mb-24">
+            <div className="mb-10">
+              <p className="eyebrow mb-3">Education</p>
+              <h3 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-[var(--text)]">
+                Academic background
+              </h3>
+            </div>
+            <div className="card p-6 sm:p-8 grid md:grid-cols-[220px_1fr] gap-6">
+              <div>
+                <p className="text-xs font-mono text-[var(--text-subtle)] uppercase tracking-wider">
+                  {education.period}
+                </p>
+              </div>
+              <div>
+                <h4 className="font-display text-lg font-semibold text-[var(--text)]">
+                  {education.degree}
+                </h4>
+                <p className="text-sm text-[var(--accent)] font-medium mb-2">
+                  {education.school}
+                </p>
+                <p className="text-sm text-[var(--text-muted)]">
+                  {education.specialization}
+                </p>
               </div>
             </div>
           </div>
+        </RevealOnScroll>
 
-          {/* Education */}
-          <div className="mb-16">
-            <h3 className="font-heading text-4xl text-center text-gray-800 cartoon-text-small mb-8">
-              <FaGraduationCap className="inline mr-3 text-cyan-500" />
-              EDUCATION
-            </h3>
-            {education.map((edu, index) => (
-              <div key={index} className="cartoon-card p-6 bg-gradient-to-r from-cyan-50 to-blue-50">
-                <div className="flex items-center gap-4">
-                  <div>
-                    <h4 className="font-funky text-xl font-bold text-gray-800">{edu.degree}</h4>
-                    <p className="font-funky text-cyan-600 font-bold">{edu.school}</p>
-                    <p className="text-gray-600">{edu.period} | {edu.specialization}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Skills Section - Refactored */}
+        <RevealOnScroll>
           <div>
-            <h3 className="font-heading text-4xl text-center text-gray-800 cartoon-text-small mb-4">
-              <FaCode className="inline mr-3 text-green-500" />
-              TECH STACK
-            </h3>
-            <p className="text-center font-body text-gray-600 mb-10">
-              (aka the things I Google less often now)
-            </p>
+            <div className="mb-10">
+              <p className="eyebrow mb-3">Tech stack</p>
+              <h3 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-[var(--text)]">
+                What I build with
+              </h3>
+            </div>
 
-            {/* Main Tools I Love */}
-            <div className="mb-12">
-              <div className="flex items-center justify-center gap-3 mb-8">
-                <FaHeart className="text-2xl text-red-500 animate-pulse" />
-                <h4 className="font-heading text-2xl text-gray-800">Tools I Love to Work With</h4>
-                <FaHeart className="text-2xl text-red-500 animate-pulse" />
+            {/* Primary Stack */}
+            <div className="mb-10">
+              <div className="flex items-center gap-3 mb-5">
+                <p className="text-xs font-mono uppercase tracking-wider text-[var(--text)]">
+                  Primary stack
+                </p>
+                <span className="tag tag-accent">Specialisation</span>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6">
-                {mainToolCategories.map((category, catIndex) => (
-                  <div key={catIndex} className="cartoon-card overflow-hidden">
-                    {/* Category Header */}
-                    <div className={`bg-gradient-to-r ${category.color} p-4`}>
-                      <div className="flex items-center gap-3">
-                        <category.icon className="text-2xl text-white" />
-                        <div>
-                          <h5 className="font-heading text-lg text-white">{category.name}</h5>
-                          <p className="font-body text-white/80 text-sm">{category.subtitle}</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Skills with jokes */}
-                    <div className="p-4 space-y-4">
-                      {category.skills.map((skill, skillIndex) => (
-                        <div key={skillIndex} className="flex items-center gap-3 group">
-                          <skill.icon className={`text-3xl ${skill.color} group-hover:scale-125 transition-transform`} />
-                          <div className="flex-1">
-                            <span className="font-funky font-bold text-gray-800">{skill.name}</span>
-                            <p className="font-body text-xs text-gray-500 italic">({skill.joke})</p>
-                          </div>
-                        </div>
+              <div className="grid md:grid-cols-2 gap-4">
+                {Object.entries(primaryStack).map(([title, items]) => (
+                  <div
+                    key={title}
+                    className="rounded-xl border-2 border-[var(--text)] bg-[var(--accent-soft)] p-6"
+                  >
+                    <p className="text-xs font-mono uppercase tracking-wider text-[var(--accent)] mb-4">
+                      {title}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {items.map((item) => (
+                        <PrimaryChip key={item.name} item={item} />
                       ))}
                     </div>
                   </div>
@@ -270,57 +432,43 @@ export const About = () => {
               </div>
             </div>
 
-            {/* Other Tools I've Touched */}
-            <div>
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <FaTools className="text-xl text-gray-500" />
-                <h4 className="font-heading text-xl text-gray-600">Other Tools I've Touched</h4>
-              </div>
-
-              <div className="flex flex-wrap justify-center gap-3">
-                {otherTools.map((tool, index) => (
-                  <div
-                    key={index}
-                    className="skill-badge px-4 py-2 flex items-center gap-2 hover:scale-105 transition-transform cursor-default"
-                  >
-                    <tool.icon className={`text-xl ${tool.color}`} />
-                    <span className="font-funky text-sm text-gray-700">{tool.name}</span>
+            {/* Supporting groups — core stack */}
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              {supportingGroups.map((group) => (
+                <div key={group.title} className="card p-6">
+                  <p className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)] mb-4">
+                    {group.title}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {group.items.map((item) => (
+                      <SupportingChip key={item.name} item={item} />
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
 
-            {/* Fun Stats */}
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="cartoon-card p-4 text-center bg-gradient-to-br from-purple-50 to-pink-50">
-                <span className="font-heading text-3xl text-purple-600">500+</span>
-                <p className="font-body text-gray-600 text-sm">Commits this year</p>
-              </div>
-              <div className="cartoon-card p-4 text-center bg-gradient-to-br from-cyan-50 to-blue-50">
-                <span className="font-heading text-3xl text-cyan-600">∞</span>
-                <p className="font-body text-gray-600 text-sm">Cups of coffee</p>
-              </div>
-              <div className="cartoon-card p-4 text-center bg-gradient-to-br from-green-50 to-teal-50">
-                <span className="font-heading text-3xl text-green-600">99%</span>
-                <p className="font-body text-gray-600 text-sm">Bugs eventually fixed</p>
-              </div>
-              <div className="cartoon-card p-4 text-center bg-gradient-to-br from-orange-50 to-amber-50">
-                <span className="font-heading text-3xl text-orange-600">24/7</span>
-                <p className="font-body text-gray-600 text-sm">Learning mode</p>
-              </div>
-            </div>
-
-            {/* Fun footer */}
-            <div className="text-center mt-10">
-              <div className="joke-card inline-block">
-                <p className="font-body text-gray-800">
-                  "I don't always test my code, but when I do, I do it in production" 🚀
-                </p>
-              </div>
+            {/* Tertiary — supplementary skills */}
+            <div className="grid md:grid-cols-2 gap-4">
+              {tertiaryGroups.map((group) => (
+                <div
+                  key={group.title}
+                  className="rounded-xl border border-dashed border-[var(--border)] p-6 bg-transparent"
+                >
+                  <p className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)] mb-3">
+                    {group.title}
+                  </p>
+                  <div className="flex flex-wrap gap-1">
+                    {group.items.map((item) => (
+                      <AdditionalChip key={item.name} item={item} />
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </RevealOnScroll>
+        </RevealOnScroll>
+      </div>
     </section>
   );
 };

@@ -1,74 +1,72 @@
-import { FaCode, FaEnvelope, FaHome, FaRocket, FaTimes } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiX } from "react-icons/hi";
+
+const items = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
+  { href: "#github-live", label: "Activity" },
+  { href: "#contact", label: "Contact" },
+];
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-40 flex flex-col items-center justify-center
-                  transition-all duration-500 ease-in-out
-                  ${menuOpen
-          ? "h-screen opacity-100 pointer-events-auto"
-          : "h-0 opacity-0 pointer-events-none"
-        }`}
-      style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}
+      className={`fixed inset-0 z-50 bg-white transition-opacity duration-300 md:hidden ${
+        menuOpen
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none invisible"
+      }`}
     >
-      <button
-        onClick={() => setMenuOpen(false)}
-        className="absolute top-6 right-6 w-12 h-12 cartoon-card bg-white flex items-center justify-center text-2xl hover:rotate-180 transition-transform duration-500"
-        aria-label="Close Menu"
-      >
-        <FaTimes />
-      </button>
+      <div className="container-tight h-full flex flex-col">
+        <div className="flex items-center justify-between h-16">
+          <span className="font-display text-lg font-semibold text-[var(--text)]">
+            Ravin<span className="text-[var(--accent)]">.</span>
+          </span>
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="w-10 h-10 flex items-center justify-center rounded-lg text-[var(--text)] hover:bg-[var(--bg-muted)]"
+            aria-label="Close menu"
+          >
+            <HiX className="text-xl" />
+          </button>
+        </div>
 
-      <a
-        href="#home"
-        onClick={() => setMenuOpen(false)}
-        className={`cartoon-card bg-white px-8 py-4 my-3 text-xl font-funky font-bold
-                    ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-        style={{ transitionDelay: menuOpen ? '100ms' : '0ms', transition: 'all 0.5s' }}
-      >
-        <FaHome className="inline mr-3 text-purple-500" />
-        Home
-      </a>
-      <a
-        href="#about"
-        onClick={() => setMenuOpen(false)}
-        className={`cartoon-card bg-white px-8 py-4 my-3 text-xl font-funky font-bold
-                    ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-        style={{ transitionDelay: menuOpen ? '200ms' : '0ms', transition: 'all 0.5s' }}
-      >
-        <FaRocket className="inline mr-3 text-cyan-500" />
-        About Me
-      </a>
-      <a
-        href="#projects"
-        onClick={() => setMenuOpen(false)}
-        className={`cartoon-card bg-white px-8 py-4 my-3 text-xl font-funky font-bold
-                    ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-        style={{ transitionDelay: menuOpen ? '300ms' : '0ms', transition: 'all 0.5s' }}
-      >
-        <FaCode className="inline mr-3 text-green-500" />
-        Projects
-      </a>
-      <a
-        href="#github-live"
-        onClick={() => setMenuOpen(false)}
-        className={`cartoon-card bg-white px-8 py-4 my-3 text-xl font-funky font-bold
-                    ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-        style={{ transitionDelay: menuOpen ? '400ms' : '0ms', transition: 'all 0.5s' }}
-      >
-        <FaCode className="inline mr-3 text-purple-500" />
-        GitHub Live
-      </a>
-      <a
-        href="#contact"
-        onClick={() => setMenuOpen(false)}
-        className={`cartoon-card bg-white px-8 py-4 my-3 text-xl font-funky font-bold
-                    ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-        style={{ transitionDelay: menuOpen ? '500ms' : '0ms', transition: 'all 0.5s' }}
-      >
-        <FaEnvelope className="inline mr-3 text-pink-500" />
-        Contact
-      </a>
+        <nav className="flex-1 flex flex-col justify-center gap-2 -mt-16">
+          {items.map((item, i) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={() => setMenuOpen(false)}
+              className={`font-display text-4xl sm:text-5xl font-semibold text-[var(--text)] tracking-tight py-2 transition-all duration-500 ${
+                menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
+              style={{ transitionDelay: menuOpen ? `${i * 50 + 100}ms` : "0ms" }}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="pb-8 flex items-center gap-4 border-t border-[var(--border)] pt-6">
+          <a
+            href="https://github.com/ravin00"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--text)]"
+          >
+            <FaGithub /> GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ravin-bandara-/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--text)]"
+          >
+            <FaLinkedin /> LinkedIn
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
