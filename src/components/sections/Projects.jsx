@@ -9,9 +9,10 @@ const statusStyles = {
 const PRIMARY_TECHS = new Set([
   "React",
   "TypeScript",
+  "Next.js",
   "ASP.NET Core",
-  "C#",
-  "Azure",
+  "FastAPI",
+  "AWS",
   "Docker",
   "Kubernetes",
   "PostgreSQL",

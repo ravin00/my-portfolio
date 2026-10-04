@@ -1,22 +1,23 @@
-import { FaArrowRight, FaGithub, FaJs, FaLinkedin, FaReact } from "react-icons/fa";
+import { FaArrowRight, FaAws, FaGithub, FaJs, FaLinkedin, FaReact } from "react-icons/fa";
 import { HiArrowDownRight } from "react-icons/hi2";
 import {
   SiDocker,
   SiDotnet,
+  SiFastapi,
   SiKubernetes,
+  SiNextdotjs,
   SiPostgresql,
-  SiSharp,
   SiTypescript,
 } from "react-icons/si";
-import { VscAzure } from "react-icons/vsc";
 
 const techStack = [
   { name: "React", Icon: FaReact, color: "#61DAFB" },
+  { name: "Next.js", Icon: SiNextdotjs, color: "#000000" },
   { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
   { name: "JavaScript", Icon: FaJs, color: "#F7DF1E" },
   { name: "ASP.NET Core", Icon: SiDotnet, color: "#512BD4" },
-  { name: "C#", Icon: SiSharp, color: "#512BD4" },
-  { name: "Azure", Icon: VscAzure, color: "#0078D4" },
+  { name: "FastAPI", Icon: SiFastapi, color: "#009688" },
+  { name: "AWS", Icon: FaAws, color: "#FF9900" },
   { name: "Docker", Icon: SiDocker, color: "#2496ED" },
   { name: "Kubernetes", Icon: SiKubernetes, color: "#326CE5" },
   { name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
@@ -59,10 +60,10 @@ export const Home = () => {
             className="text-xl sm:text-2xl text-[var(--text-muted)] leading-relaxed mb-4 max-w-2xl animate-fade-in-up"
             style={{ opacity: 0, animationDelay: "220ms" }}
           >
-            Full-Stack Software Engineer specialising in{" "}
+            Software Engineer working with{" "}
             <span className="text-[var(--text)] font-medium">React</span>,{" "}
-            <span className="text-[var(--text)] font-medium">TypeScript</span> and{" "}
-            <span className="text-[var(--text)] font-medium">ASP.NET Core</span>.
+            <span className="text-[var(--text)] font-medium">ASP.NET Core</span> and{" "}
+            <span className="text-[var(--text)] font-medium">FastAPI</span>.
           </p>
 
           <p

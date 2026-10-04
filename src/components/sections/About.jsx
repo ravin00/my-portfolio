@@ -2,54 +2,36 @@ import {
   FaAws,
   FaDatabase,
   FaDocker,
-  FaFigma,
-  FaGitAlt,
-  FaJava,
-  FaJira,
   FaJs,
-  FaLinux,
-  FaNodeJs,
-  FaPython,
   FaReact,
-  FaTerminal,
 } from "react-icons/fa";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import {
   SiArgo,
   SiDotnet,
-  SiExpress,
   SiFastapi,
   SiGithubactions,
   SiHelm,
-  SiJfrog,
   SiKubernetes,
   SiMongodb,
-  SiMysql,
   SiNextdotjs,
   SiPostgresql,
-  SiRedis,
-  SiSharp,
-  SiSpringboot,
-  SiStorybook,
-  SiTailwindcss,
   SiTerraform,
   SiTypescript,
 } from "react-icons/si";
-import { VscAzure } from "react-icons/vsc";
 import ravinPhoto from "../../assets/WhatsApp Image 2026-02-02 at 03.44.56.jpeg";
 import { RevealOnScroll } from "../RevealOnScroll";
 
 const primaryStack = {
   Frontend: [
     { name: "React", Icon: FaReact, color: "#61DAFB" },
+    { name: "Next.js", Icon: SiNextdotjs, color: "#000000" },
     { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
     { name: "JavaScript", Icon: FaJs, color: "#F7DF1E" },
-    { name: "Next.js", Icon: SiNextdotjs, color: "#000000" },
-    { name: "Tailwind CSS", Icon: SiTailwindcss, color: "#38BDF8" },
   ],
   Backend: [
-    { name: "C#", Icon: SiSharp, color: "#512BD4" },
+    { name: "FastAPI", Icon: SiFastapi, color: "#009688" },
     { name: "ASP.NET Core", Icon: SiDotnet, color: "#512BD4" },
-    { name: "Entity Framework Core", Icon: FaDatabase, color: "#512BD4" },
   ],
 };
 
@@ -57,7 +39,7 @@ const supportingGroups = [
   {
     title: "Cloud & DevOps",
     items: [
-      { name: "Azure", Icon: VscAzure, color: "#0078D4" },
+      { name: "AWS", Icon: FaAws, color: "#FF9900" },
       { name: "Docker", Icon: FaDocker, color: "#2496ED" },
       { name: "Kubernetes", Icon: SiKubernetes, color: "#326CE5" },
       { name: "GitHub Actions", Icon: SiGithubactions, color: "#2088FF" },
@@ -70,36 +52,8 @@ const supportingGroups = [
     title: "Databases",
     items: [
       { name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
-      { name: "SQL Server", Icon: FaDatabase, color: "#CC2927" },
-      { name: "Redis", Icon: SiRedis, color: "#DC382D" },
       { name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
-    ],
-  },
-];
-
-const tertiaryGroups = [
-  {
-    title: "Additional experience",
-    items: [
-      { name: "Java", Icon: FaJava, color: "#ED8B00" },
-      { name: "Spring Boot", Icon: SiSpringboot, color: "#6DB33F" },
-      { name: "Python", Icon: FaPython, color: "#3776AB" },
-      { name: "FastAPI", Icon: SiFastapi, color: "#009688" },
-      { name: "Node.js", Icon: FaNodeJs, color: "#339933" },
-      { name: "Express", Icon: SiExpress, color: "#000000" },
-      { name: "MySQL", Icon: SiMysql, color: "#4479A1" },
-      { name: "Bash", Icon: FaTerminal, color: "#4EAA25" },
-    ],
-  },
-  {
-    title: "Tools",
-    items: [
-      { name: "Git", Icon: FaGitAlt, color: "#F05032" },
-      { name: "Linux", Icon: FaLinux, color: "#000000" },
-      { name: "JIRA", Icon: FaJira, color: "#0052CC" },
-      { name: "Figma", Icon: FaFigma, color: "#F24E1E" },
-      { name: "Storybook", Icon: SiStorybook, color: "#FF4785" },
-      { name: "JFrog", Icon: SiJfrog, color: "#41BF47" },
+      { name: "SQL Server", Icon: FaDatabase, color: "#CC2927" },
     ],
   },
 ];
@@ -194,6 +148,16 @@ const education = {
   specialization: "Specialising in Information Technology",
 };
 
+const blogs = [
+  { title: "A Cure for the React useState Hell", url: "https://medium.com/@ravinbandara76/a-cure-for-the-react-usestate-hell-c5ad8ae62d83" },
+  { title: "The Micro-Services Journey: .NET, Docker, Kubernetes, API Gateways & Observability", url: "https://medium.com/@ravinbandara76/the-micro-services-journey-net-docker-kubernetes-api-gateways-observability-made-simple-db8ba5a82d2d" },
+  { title: "Building Microservices with .NET, Docker and Kubernetes", url: "https://medium.com/@ravinbandara76/building-microservices-with-net-docker-and-kubernetes-946d44398af7" },
+  { title: "From Zero to Kubernetes in Production", url: "https://medium.com/@ravinbandara76/from-zero-to-kubernetes-in-production-step-by-step-guide-for-setting-up-a-secure-observable-b0bc9f99929b" },
+  { title: "GitOps: The DevOps Evolution You Shouldn't Ignore", url: "https://medium.com/@ravinbandara76/gitops-the-devops-evolution-you-shouldnt-ignore-ee2843e6b80b" },
+  { title: "Mastering Debounce in React", url: "https://medium.com/@ravinbandara76/mastering-debounce-in-react-optimize-performance-like-a-pro-e1e28d06001d" },
+  { title: "React Hydration: A Deep Dive with Practical Examples", url: "https://medium.com/@ravinbandara76/react-hydration-a-deep-dive-with-practical-examples-d9bbc512ff03" },
+];
+
 const PrimaryChip = ({ item }) => {
   const Icon = item.Icon;
   return (
@@ -214,16 +178,6 @@ const SupportingChip = ({ item }) => {
   );
 };
 
-const AdditionalChip = ({ item }) => {
-  const Icon = item.Icon;
-  return (
-    <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-xs text-[var(--text-subtle)] hover:text-[var(--text-muted)] transition-colors">
-      <Icon className="text-xs opacity-70" style={{ color: item.color }} />
-      {item.name}
-    </span>
-  );
-};
-
 export const About = () => {
   return (
     <section id="about" className="py-24 sm:py-32">
@@ -233,21 +187,24 @@ export const About = () => {
             <div>
               <p className="eyebrow mb-4">About</p>
               <h2 className="font-display text-4xl sm:text-5xl font-semibold tracking-tight text-[var(--text)] mb-6">
-                Focused on React and ASP.NET Core.
+                Building across the stack.
               </h2>
               <div className="space-y-4 text-[var(--text-muted)] leading-relaxed">
                 <p>
-                  I'm a Full-Stack Software Engineer specialising in{" "}
-                  <span className="text-[var(--text)] font-medium">React</span> and{" "}
-                  <span className="text-[var(--text)] font-medium">ASP.NET Core</span>.
-                  I design, build, deploy and maintain cloud-native applications
-                  end-to-end.
+                  I'm a Software Engineer with a strong interest in{" "}
+                  <span className="text-[var(--text)] font-medium">DevOps</span>.
+                  I build web applications with{" "}
+                  <span className="text-[var(--text)] font-medium">React</span>,{" "}
+                  <span className="text-[var(--text)] font-medium">FastAPI</span> and{" "}
+                  <span className="text-[var(--text)] font-medium">ASP.NET Core</span>,
+                  and I'm just as comfortable shipping and operating them as I am
+                  writing the code.
                 </p>
                 <p>
-                  My day-to-day is a typed React frontend talking to an ASP.NET
-                  Core API, backed by PostgreSQL or SQL Server, containerised
-                  with Docker and shipped to Kubernetes on Azure through
-                  GitOps pipelines (GitHub Actions, Terraform, ArgoCD).
+                  I have hands-on experience with Docker, Kubernetes, Terraform,
+                  GitHub Actions and ArgoCD — from containerising services to
+                  setting up GitOps pipelines on AWS. DevOps isn't a separate
+                  role for me; it's part of how I think about building software.
                 </p>
                 <p>
                   I care about clarity — in code, in APIs, and in how a system
@@ -396,6 +353,33 @@ export const About = () => {
         </RevealOnScroll>
 
         <RevealOnScroll>
+          <div className="mb-24">
+            <div className="mb-10">
+              <p className="eyebrow mb-3">Writing</p>
+              <h3 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-[var(--text)]">
+                Blog posts
+              </h3>
+            </div>
+            <div className="space-y-3">
+              {blogs.map((blog) => (
+                <a
+                  key={blog.url}
+                  href={blog.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card p-5 flex items-center justify-between gap-4 group block"
+                >
+                  <span className="text-sm font-medium text-[var(--text)] group-hover:text-[var(--accent)] transition-colors">
+                    {blog.title}
+                  </span>
+                  <FaArrowUpRightFromSquare className="text-xs text-[var(--text-subtle)] group-hover:text-[var(--accent)] transition-colors flex-shrink-0" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+
+        <RevealOnScroll>
           <div>
             <div className="mb-10">
               <p className="eyebrow mb-3">Tech stack</p>
@@ -432,8 +416,8 @@ export const About = () => {
               </div>
             </div>
 
-            {/* Supporting groups — core stack */}
-            <div className="grid md:grid-cols-2 gap-4 mb-6">
+            {/* Supporting groups */}
+            <div className="grid md:grid-cols-2 gap-4">
               {supportingGroups.map((group) => (
                 <div key={group.title} className="card p-6">
                   <p className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)] mb-4">
@@ -442,25 +426,6 @@ export const About = () => {
                   <div className="flex flex-wrap gap-2">
                     {group.items.map((item) => (
                       <SupportingChip key={item.name} item={item} />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Tertiary — supplementary skills */}
-            <div className="grid md:grid-cols-2 gap-4">
-              {tertiaryGroups.map((group) => (
-                <div
-                  key={group.title}
-                  className="rounded-xl border border-dashed border-[var(--border)] p-6 bg-transparent"
-                >
-                  <p className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)] mb-3">
-                    {group.title}
-                  </p>
-                  <div className="flex flex-wrap gap-1">
-                    {group.items.map((item) => (
-                      <AdditionalChip key={item.name} item={item} />
                     ))}
                   </div>
                 </div>
