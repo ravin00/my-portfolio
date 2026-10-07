@@ -37,7 +37,7 @@ const projects = [
   {
     title: "AFIE",
     tagline: "Autonomous FinOps Intelligence Engine for Kubernetes",
-    period: "2026 — Present",
+    period: "2026 - Present",
     category: "Cloud",
     status: "In Progress",
     problem:
@@ -58,10 +58,10 @@ const projects = [
     ],
     metrics: [
       "Autonomous cost optimisation with policy-enforced SLO guardrails",
-      "Every RL action explained via SHAP — no black-box decisions in prod",
+      "Every RL action explained via SHAP - no black-box decisions in prod",
       "47-dim telemetry state vector feeding a PPO agent in near real-time",
       "Local KIND stack lifts to Azure (Event Hub · Cosmos DB · Azure ML) unchanged",
-      "GitOps deploy via ArgoCD + Terraform — version-controlled from day one",
+      "GitOps deploy via ArgoCD + Terraform - version-controlled from day one",
       "IEEE paper planned on the RL evaluation results and PCL safety model",
     ],
     stack: [
@@ -84,7 +84,7 @@ const projects = [
   {
     title: "EduMind",
     tagline: "Learning Analytics Platform",
-    period: "2025 — Present",
+    period: "2025 - Present",
     category: "Cloud",
     status: "Shipped",
     problem: "Academic teams lacked early-warning visibility for student risk.",
@@ -102,10 +102,10 @@ const projects = [
     ],
     metrics: [
       "Intervention lead time reduced through live behavioural signals",
-      "Explainable risk model — instructors see the drivers, not just the score",
+      "Explainable risk model - instructors see the drivers, not just the score",
       "Cohort trend drill-downs for at-a-glance intervention planning",
       "TimescaleDB pipeline scales to years of student event history",
-      "Terraform-managed GKE deployment — infra is reproducible from a repo",
+      "Terraform-managed GKE deployment - infra is reproducible from a repo",
       "Model outputs versioned alongside training data for auditability",
     ],
     stack: ["React", "FastAPI", "Scikit-learn", "PostgreSQL", "TimescaleDB", "GKE", "Terraform"],
@@ -116,7 +116,7 @@ const projects = [
   {
     title: "SkillHive",
     tagline: "Social Learning Platform",
-    period: "2025 — Present",
+    period: "2025 - Present",
     category: "Web",
     status: "Shipped",
     problem: "Learners needed a cleaner way to plan and collaborate in one place.",
@@ -147,7 +147,7 @@ const projects = [
   {
     title: "Self-Service Portal",
     tagline: "Cognite · F25e",
-    period: "Aug 2024 — Apr 2025",
+    period: "Aug 2024 - Apr 2025",
     category: "Cloud",
     status: "Shipped",
     summary:
@@ -163,7 +163,7 @@ const projects = [
   {
     title: "ExpenseTracker",
     tagline: "Microservices",
-    period: "May 2025 — Jun 2025",
+    period: "May 2025 - Jun 2025",
     category: "Backend",
     status: "Shipped",
     summary:
@@ -179,7 +179,7 @@ const projects = [
   {
     title: "Cafe Management System",
     tagline: "End-to-end operations",
-    period: "Apr 2024 — Oct 2025",
+    period: "Apr 2024 - Oct 2025",
     category: "Web",
     status: "Shipped",
     summary:
@@ -196,7 +196,7 @@ const projects = [
   {
     title: "Time Sync",
     tagline: "Academic Scheduler",
-    period: "Feb 2025 — May 2025",
+    period: "Feb 2025 - May 2025",
     category: "Backend",
     status: "Shipped",
     summary:

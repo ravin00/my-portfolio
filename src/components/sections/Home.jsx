@@ -4,22 +4,23 @@ import {
   SiDocker,
   SiDotnet,
   SiFastapi,
+  SiGithubactions,
   SiKubernetes,
-  SiNextdotjs,
   SiPostgresql,
+  SiTerraform,
   SiTypescript,
 } from "react-icons/si";
 
 const techStack = [
+  { name: "Kubernetes", Icon: SiKubernetes, color: "#326CE5" },
+  { name: "Docker", Icon: SiDocker, color: "#2496ED" },
+  { name: "AWS", Icon: FaAws, color: "#FF9900" },
+  { name: "Terraform", Icon: SiTerraform, color: "#7B42BC" },
+  { name: "GitHub Actions", Icon: SiGithubactions, color: "#2088FF" },
   { name: "React", Icon: FaReact, color: "#61DAFB" },
-  { name: "Next.js", Icon: SiNextdotjs, color: "#000000" },
   { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
-  { name: "JavaScript", Icon: FaJs, color: "#F7DF1E" },
   { name: "ASP.NET Core", Icon: SiDotnet, color: "#512BD4" },
   { name: "FastAPI", Icon: SiFastapi, color: "#009688" },
-  { name: "AWS", Icon: FaAws, color: "#FF9900" },
-  { name: "Docker", Icon: SiDocker, color: "#2496ED" },
-  { name: "Kubernetes", Icon: SiKubernetes, color: "#326CE5" },
   { name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
 ];
 
@@ -60,18 +61,18 @@ export const Home = () => {
             className="text-xl sm:text-2xl text-[var(--text-muted)] leading-relaxed mb-4 max-w-2xl animate-fade-in-up"
             style={{ opacity: 0, animationDelay: "220ms" }}
           >
-            Software Engineer working with{" "}
-            <span className="text-[var(--text)] font-medium">React</span>,{" "}
-            <span className="text-[var(--text)] font-medium">ASP.NET Core</span> and{" "}
-            <span className="text-[var(--text)] font-medium">FastAPI</span>.
+            DevOps Engineer with a full-stack development background in{" "}
+            <span className="text-[var(--text)] font-medium">Kubernetes</span>,{" "}
+            <span className="text-[var(--text)] font-medium">AWS</span> and{" "}
+            <span className="text-[var(--text)] font-medium">GitOps</span>.
           </p>
 
           <p
             className="text-base sm:text-lg text-[var(--text-muted)] leading-relaxed mb-10 max-w-2xl animate-fade-in-up"
             style={{ opacity: 0, animationDelay: "300ms" }}
           >
-            I build scalable cloud-native applications and ship them with modern
-            DevOps practices.
+            I build and operate cloud-native infrastructure - CI/CD pipelines,
+            container orchestration and GitOps workflows.
           </p>
 
           <div

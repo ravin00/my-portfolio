@@ -38,7 +38,7 @@ const StatTile = ({ label, value, icon: Icon }) => {
         <Icon className="text-sm text-[var(--text-subtle)]" />
       </div>
       <p className="font-display text-3xl font-semibold text-[var(--text)] tabular-nums">
-        {value == null ? "—" : display}
+        {value == null ? "-" : display}
       </p>
     </div>
   );
@@ -180,7 +180,7 @@ export const GitHubActivity = () => {
             </h2>
             <p className="text-lg text-[var(--text-muted)] leading-relaxed">
               A live snapshot of what I've been building. Numbers pulled from the
-              GitHub public API — no cache, no fluff.
+              GitHub public API - no cache, no fluff.
             </p>
           </div>
         </RevealOnScroll>

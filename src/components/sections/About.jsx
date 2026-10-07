@@ -3,7 +3,9 @@ import {
   FaDatabase,
   FaDocker,
   FaJs,
+  FaPython,
   FaReact,
+  FaTerminal,
 } from "react-icons/fa";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import {
@@ -11,41 +13,54 @@ import {
   SiDotnet,
   SiFastapi,
   SiGithubactions,
+  SiGrafana,
   SiHelm,
   SiKubernetes,
   SiMongodb,
   SiNextdotjs,
+  SiOpentelemetry,
   SiPostgresql,
+  SiPrometheus,
   SiTerraform,
   SiTypescript,
 } from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
 import ravinPhoto from "../../assets/WhatsApp Image 2026-02-02 at 03.44.56.jpeg";
 import { RevealOnScroll } from "../RevealOnScroll";
 
 const primaryStack = {
-  Frontend: [
-    { name: "React", Icon: FaReact, color: "#61DAFB" },
-    { name: "Next.js", Icon: SiNextdotjs, color: "#000000" },
-    { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
-    { name: "JavaScript", Icon: FaJs, color: "#F7DF1E" },
+  "Cloud & Infrastructure": [
+    { name: "AWS", Icon: FaAws, color: "#FF9900" },
+    { name: "Azure", Icon: VscAzure, color: "#0078D4" },
+    { name: "Docker", Icon: FaDocker, color: "#2496ED" },
+    { name: "Kubernetes", Icon: SiKubernetes, color: "#326CE5" },
+    { name: "Terraform", Icon: SiTerraform, color: "#7B42BC" },
   ],
-  Backend: [
-    { name: "FastAPI", Icon: SiFastapi, color: "#009688" },
-    { name: "ASP.NET Core", Icon: SiDotnet, color: "#512BD4" },
+  "CI/CD & GitOps": [
+    { name: "GitHub Actions", Icon: SiGithubactions, color: "#2088FF" },
+    { name: "ArgoCD", Icon: SiArgo, color: "#EF7B4D" },
+    { name: "Helm", Icon: SiHelm, color: "#0F1689" },
+    { name: "Buildpacks", Icon: FaDocker, color: "#2496ED" },
+  ],
+  "Observability": [
+    { name: "Prometheus", Icon: SiPrometheus, color: "#E6522C" },
+    { name: "Grafana", Icon: SiGrafana, color: "#F46800" },
+    { name: "OpenTelemetry", Icon: SiOpentelemetry, color: "#425CC7" },
   ],
 };
 
 const supportingGroups = [
   {
-    title: "Cloud & DevOps",
+    title: "Development",
     items: [
-      { name: "AWS", Icon: FaAws, color: "#FF9900" },
-      { name: "Docker", Icon: FaDocker, color: "#2496ED" },
-      { name: "Kubernetes", Icon: SiKubernetes, color: "#326CE5" },
-      { name: "GitHub Actions", Icon: SiGithubactions, color: "#2088FF" },
-      { name: "Terraform", Icon: SiTerraform, color: "#7B42BC" },
-      { name: "Helm", Icon: SiHelm, color: "#0F1689" },
-      { name: "ArgoCD", Icon: SiArgo, color: "#EF7B4D" },
+      { name: "React", Icon: FaReact, color: "#61DAFB" },
+      { name: "Next.js", Icon: SiNextdotjs, color: "#000000" },
+      { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
+      { name: "JavaScript", Icon: FaJs, color: "#F7DF1E" },
+      { name: "FastAPI", Icon: SiFastapi, color: "#009688" },
+      { name: "ASP.NET Core", Icon: SiDotnet, color: "#512BD4" },
+      { name: "Python", Icon: FaPython, color: "#3776AB" },
+      { name: "Bash", Icon: FaTerminal, color: "#4EAA25" },
     ],
   },
   {
@@ -62,7 +77,7 @@ const experiences = [
   {
     role: "Systems & DevOps Engineer Intern",
     company: "Vizuamatix",
-    period: "Jun 2025 — Present",
+    period: "Oct 2026 - Present",
     type: "Full-time",
     highlights: [
       "Working on systems engineering and DevOps workflows to support product infrastructure.",
@@ -71,7 +86,7 @@ const experiences = [
   {
     role: "Software Engineer Intern",
     company: "Creative Software",
-    period: "Aug 2024 — Apr 2025",
+    period: "Aug 2024 - Apr 2025",
     type: "Full-time · Hybrid",
     groups: [
       {
@@ -89,7 +104,7 @@ const experiences = [
       {
         title: "Backend Development",
         items: [
-          "Contributed to backend services with FastAPI — developing APIs and optimising workflows for seamless integration with the frontend.",
+          "Contributed to backend services with FastAPI - developing APIs and optimising workflows for seamless integration with the frontend.",
         ],
       },
       {
@@ -129,8 +144,8 @@ const experiences = [
   },
   {
     role: "External Junior Software Engineer",
-    company: "Cognite — Oslo, Norway",
-    period: "Aug 2024 — Apr 2025",
+    company: "Cognite - Oslo, Norway",
+    period: "Aug 2024 - Apr 2025",
     type: "Remote · via Creative Software",
     highlights: [
       "Engaged externally through Creative Software as part of a placement with Cognite in Oslo, Norway.",
@@ -141,7 +156,7 @@ const experiences = [
   {
     role: "Developer",
     company: "MS Club of SLIIT",
-    period: "Jun 2024 — Present",
+    period: "Jun 2024 - Present",
     type: "Community",
     highlights: [
       "Full-stack development on community projects using Next.js.",
@@ -152,8 +167,8 @@ const experiences = [
 
 const education = {
   degree: "BSc (Hons) in Information Technology",
-  school: "SLIIT — Sri Lanka Institute of Information Technology",
-  period: "2022 — 2026",
+  school: "SLIIT - Sri Lanka Institute of Information Technology",
+  period: "2022 - 2026",
   specialization: "Specialising in Information Technology",
 };
 
@@ -196,29 +211,30 @@ export const About = () => {
             <div>
               <p className="eyebrow mb-4">About</p>
               <h2 className="font-display text-4xl sm:text-5xl font-semibold tracking-tight text-[var(--text)] mb-6">
-                Building across the stack.
+                DevOps engineer who can also build the app.
               </h2>
               <div className="space-y-4 text-[var(--text-muted)] leading-relaxed">
                 <p>
-                  I'm a Software Engineer with a strong interest in{" "}
-                  <span className="text-[var(--text)] font-medium">DevOps</span>.
-                  I build web applications with{" "}
-                  <span className="text-[var(--text)] font-medium">React</span>,{" "}
-                  <span className="text-[var(--text)] font-medium">FastAPI</span> and{" "}
-                  <span className="text-[var(--text)] font-medium">ASP.NET Core</span>,
-                  and I'm just as comfortable shipping and operating them as I am
-                  writing the code.
+                  I'm a{" "}
+                  <span className="text-[var(--text)] font-medium">DevOps Engineer</span>{" "}
+                  with a full-stack development background. I work with{" "}
+                  <span className="text-[var(--text)] font-medium">Kubernetes</span>,{" "}
+                  <span className="text-[var(--text)] font-medium">Docker</span>,{" "}
+                  <span className="text-[var(--text)] font-medium">Terraform</span> and{" "}
+                  <span className="text-[var(--text)] font-medium">AWS</span> to
+                  build and operate cloud-native infrastructure.
                 </p>
                 <p>
-                  I have hands-on experience with Docker, Kubernetes, Terraform,
-                  GitHub Actions and ArgoCD — from containerising services to
-                  setting up GitOps pipelines on AWS. DevOps isn't a separate
-                  role for me; it's part of how I think about building software.
+                  My day-to-day is CI/CD pipelines with GitHub Actions, GitOps
+                  workflows through ArgoCD, and containerised deployments on
+                  Kubernetes. I also build the applications that run on this
+                  infrastructure - React frontends, FastAPI and ASP.NET Core
+                  backends, backed by PostgreSQL or MongoDB.
                 </p>
                 <p>
-                  I care about clarity — in code, in APIs, and in how a system
-                  behaves. I prefer small services with sensible defaults over
-                  clever ones.
+                  I care about reliability, automation and keeping things
+                  simple. If it can be a pipeline, it shouldn't be a manual
+                  step.
                 </p>
               </div>
             </div>

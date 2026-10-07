@@ -53,7 +53,7 @@ export const Sidebar = () => {
             Ravin Bandara
           </p>
           <p className="text-sm text-[var(--text-muted)] mt-0.5">
-            Software Engineer
+            DevOps Engineer
           </p>
         </a>
 
