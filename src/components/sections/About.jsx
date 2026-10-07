@@ -60,6 +60,15 @@ const supportingGroups = [
 
 const experiences = [
   {
+    role: "Systems & DevOps Engineer Intern",
+    company: "Vizuamatix",
+    period: "Jun 2025 — Present",
+    type: "Full-time",
+    highlights: [
+      "Working on systems engineering and DevOps workflows to support product infrastructure.",
+    ],
+  },
+  {
     role: "Software Engineer Intern",
     company: "Creative Software",
     period: "Aug 2024 — Apr 2025",
