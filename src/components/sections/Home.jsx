@@ -1,143 +1,102 @@
-import { FaArrowRight, FaAws, FaGithub, FaJs, FaLinkedin, FaReact } from "react-icons/fa";
-import { HiArrowDownRight } from "react-icons/hi2";
-import {
-  SiDocker,
-  SiDotnet,
-  SiFastapi,
-  SiGithubactions,
-  SiKubernetes,
-  SiPostgresql,
-  SiTerraform,
-  SiTypescript,
-} from "react-icons/si";
+import { FaArrowDown, FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
 
-const techStack = [
-  { name: "Kubernetes", Icon: SiKubernetes, color: "#326CE5" },
-  { name: "Docker", Icon: SiDocker, color: "#2496ED" },
-  { name: "AWS", Icon: FaAws, color: "#FF9900" },
-  { name: "Terraform", Icon: SiTerraform, color: "#7B42BC" },
-  { name: "GitHub Actions", Icon: SiGithubactions, color: "#2088FF" },
-  { name: "React", Icon: FaReact, color: "#61DAFB" },
-  { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
-  { name: "ASP.NET Core", Icon: SiDotnet, color: "#512BD4" },
-  { name: "FastAPI", Icon: SiFastapi, color: "#009688" },
-  { name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
+const marqueeItems = [
+  "Kubernetes", "Docker", "AWS", "Terraform", "GitHub Actions", "GitLab CI/CD",
+  "ArgoCD", "Helm", "React", "TypeScript", "ASP.NET Core", "FastAPI", "PostgreSQL",
 ];
 
 export const Home = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center pt-20 pb-8 overflow-hidden bg-[var(--black)]"
     >
-      <div className="absolute inset-0 bg-grid pointer-events-none" aria-hidden="true" />
-
-      <div className="container-tight relative z-10 w-full">
-        <div className="max-w-3xl">
-          <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--border)] bg-white text-xs font-medium text-[var(--text-muted)] mb-8 animate-fade-in-up"
-            style={{ opacity: 0 }}
-          >
-            <span className="relative flex w-2 h-2">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-            </span>
-            Available for new opportunities
-          </div>
-
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl font-semibold text-[var(--text)] tracking-tight leading-[1.05] mb-6 flex flex-wrap gap-x-4">
-            {"Ravin Bandara".split(" ").map((word, i) => (
-              <span
-                key={word}
-                className="inline-block animate-fade-in-up"
-                style={{ opacity: 0, animationDelay: `${120 + i * 90}ms` }}
-              >
-                {word}
-              </span>
-            ))}
-          </h1>
-
-          <p
-            className="text-xl sm:text-2xl text-[var(--text-muted)] leading-relaxed mb-4 max-w-2xl animate-fade-in-up"
-            style={{ opacity: 0, animationDelay: "220ms" }}
-          >
-            DevOps Engineer with a full-stack development background in{" "}
-            <span className="text-[var(--text)] font-medium">Kubernetes</span>,{" "}
-            <span className="text-[var(--text)] font-medium">AWS</span> and{" "}
-            <span className="text-[var(--text)] font-medium">GitOps</span>.
+      <div className="container-wide relative z-10 w-full flex-1 flex flex-col justify-center">
+        <div
+          className="animate-fade-in-up"
+          style={{ opacity: 0, animationDelay: "100ms" }}
+        >
+          <p className="font-mono text-xs text-[var(--white-muted)] uppercase tracking-[0.2em] mb-6">
+            Hey, I'm Ravin
           </p>
-
-          <p
-            className="text-base sm:text-lg text-[var(--text-muted)] leading-relaxed mb-10 max-w-2xl animate-fade-in-up"
-            style={{ opacity: 0, animationDelay: "300ms" }}
-          >
-            I build and operate cloud-native infrastructure - CI/CD pipelines,
-            container orchestration and GitOps workflows.
-          </p>
-
-          <div
-            className="flex flex-wrap items-center gap-3 mb-12 animate-fade-in-up"
-            style={{ opacity: 0, animationDelay: "380ms" }}
-          >
-            <a href="#projects" className="btn-primary">
-              View my work <FaArrowRight className="text-xs" />
-            </a>
-            <a href="#contact" className="btn-secondary">
-              Get in touch
-            </a>
-            <div className="flex items-center gap-1 ml-2">
-              <a
-                href="https://github.com/ravin00"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="w-10 h-10 flex items-center justify-center rounded-lg text-[var(--text-muted)] hover:text-[var(--text)] hover:bg-[var(--bg-muted)] transition-colors"
-              >
-                <FaGithub />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/ravin-bandara-/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="w-10 h-10 flex items-center justify-center rounded-lg text-[var(--text-muted)] hover:text-[var(--text)] hover:bg-[var(--bg-muted)] transition-colors"
-              >
-                <FaLinkedin />
-              </a>
-            </div>
-          </div>
-
-          <div
-            className="animate-fade-in-up"
-            style={{ opacity: 0, animationDelay: "460ms" }}
-          >
-            <p className="eyebrow mb-4">Primary stack</p>
-            <div className="marquee">
-              <div className="marquee-track">
-                {[...techStack, ...techStack].map((tech, i) => {
-                  const Icon = tech.Icon;
-                  return (
-                    <div
-                      key={i}
-                      className="flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--text)] transition-colors whitespace-nowrap"
-                    >
-                      <Icon className="text-xl" style={{ color: tech.color }} />
-                      <span className="text-sm font-medium">{tech.name}</span>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
         </div>
 
-        <a
-          href="#about"
-          className="hidden md:flex absolute bottom-8 right-6 items-center gap-2 text-xs font-mono text-[var(--text-subtle)] hover:text-[var(--text)] transition-colors"
+        <h1
+          className="text-[clamp(2.5rem,7vw,6rem)] font-black leading-[1] tracking-[-0.03em] text-[var(--white)] uppercase mb-6 animate-fade-in-up"
+          style={{ opacity: 0, animationDelay: "200ms" }}
         >
-          Scroll <HiArrowDownRight />
-        </a>
+          A DevOps Engineer{" "}
+          <span className="text-[var(--yellow)]">
+            building cloud-native infrastructure and scalable systems.
+          </span>
+        </h1>
+
+        <div
+          className="max-w-2xl mb-10 animate-fade-in-up"
+          style={{ opacity: 0, animationDelay: "400ms" }}
+        >
+          <p className="text-lg text-[var(--white-dim)] leading-relaxed">
+            I build and operate CI/CD pipelines, container orchestration and
+            GitOps workflows - with a full-stack development background in
+            React, FastAPI and ASP.NET Core.
+          </p>
+        </div>
+
+        <div
+          className="flex flex-wrap items-center gap-4 mb-16 animate-fade-in-up"
+          style={{ opacity: 0, animationDelay: "500ms" }}
+        >
+          <a
+            href="#work"
+            className="text-sm font-semibold text-[var(--black)] bg-[var(--yellow)] px-6 py-3 hover:bg-[var(--yellow-dim)] transition-colors uppercase tracking-wider"
+          >
+            View Work
+          </a>
+          <a
+            href="#contact"
+            className="text-sm font-semibold text-[var(--white)] border-2 border-[var(--white)] px-6 py-3 hover:bg-[var(--white)] hover:text-[var(--black)] transition-colors uppercase tracking-wider"
+          >
+            Contact me
+          </a>
+          <div className="flex items-center gap-3 ml-2">
+            <a href="https://github.com/ravin00" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-[var(--white-muted)] hover:text-[var(--yellow)] transition-colors">
+              <FaGithub className="text-lg" />
+            </a>
+            <a href="https://www.linkedin.com/in/ravin-bandara-/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[var(--white-muted)] hover:text-[var(--yellow)] transition-colors">
+              <FaLinkedin className="text-lg" />
+            </a>
+            <a href="https://medium.com/@ravinbandara76" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="text-[var(--white-muted)] hover:text-[var(--yellow)] transition-colors">
+              <FaMedium className="text-lg" />
+            </a>
+          </div>
+        </div>
       </div>
+
+      <div
+        className="w-full border-t border-[var(--black-border)] pt-6 animate-fade-in-up"
+        style={{ opacity: 0, animationDelay: "600ms" }}
+      >
+        <div className="marquee">
+          <div className="marquee-track">
+            {[...marqueeItems, ...marqueeItems].map((item, i) => (
+              <span
+                key={i}
+                className="font-mono text-xs text-[var(--white-muted)] uppercase tracking-wider whitespace-nowrap"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="#about"
+        className="absolute bottom-8 right-8 hidden md:flex items-center gap-2 font-mono text-[10px] text-[var(--white-muted)] hover:text-[var(--yellow)] transition-colors uppercase tracking-wider"
+        aria-label="Scroll down"
+      >
+        Scroll <FaArrowDown className="text-[8px]" />
+      </a>
     </section>
   );
 };

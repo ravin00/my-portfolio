@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiMenuAlt4 } from "react-icons/hi";
 
 const navItems = [
   { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#github-live", label: "Activity" },
+  { href: "#experience", label: "Experience" },
+  { href: "#work", label: "Work" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -25,56 +24,42 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-40 transition-all duration-300 lg:hidden ${
+      className={`fixed top-0 w-full z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-white/80 backdrop-blur-md border-b border-[var(--border)]"
+          ? "bg-[var(--black)]/95 backdrop-blur-md border-b border-[var(--black-border)]"
           : "bg-transparent"
       }`}
     >
-      <div className="container-tight">
-        <div className="flex items-center justify-between h-16">
+      <div className="container-wide">
+        <div className="flex items-center justify-between h-16 md:h-20">
           <a
             href="#home"
-            className="font-display text-lg font-semibold text-[var(--text)] tracking-tight"
+            className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[var(--yellow)]"
           >
-            Ravin<span className="text-[var(--accent)]">.</span>
+            RAVIN BANDARA<span className="text-[var(--white-muted)]">&reg;</span>
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {navItems.map((item) => (
-              <a key={item.href} href={item.href} className="nav-link">
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm text-[var(--white-dim)] hover:text-[var(--yellow)] transition-colors font-medium"
+              >
                 {item.label}
               </a>
             ))}
-          </div>
-
-          <div className="hidden md:flex items-center gap-2">
             <a
-              href="https://github.com/ravin00"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="w-9 h-9 flex items-center justify-center rounded-lg text-[var(--text-muted)] hover:text-[var(--text)] hover:bg-[var(--bg-muted)] transition-colors"
+              href="#contact"
+              className="text-sm font-semibold text-[var(--black)] bg-[var(--yellow)] px-5 py-2.5 hover:bg-[var(--yellow-dim)] transition-colors"
             >
-              <FaGithub className="text-base" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/ravin-bandara-/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="w-9 h-9 flex items-center justify-center rounded-lg text-[var(--text-muted)] hover:text-[var(--text)] hover:bg-[var(--bg-muted)] transition-colors"
-            >
-              <FaLinkedin className="text-base" />
-            </a>
-            <a href="#contact" className="btn-primary ml-2 py-2 px-4 text-sm">
-              Get in touch
+              Let's Talk
             </a>
           </div>
 
           <button
             onClick={() => setMenuOpen((prev) => !prev)}
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg text-[var(--text)] hover:bg-[var(--bg-muted)] transition-colors"
+            className="md:hidden w-10 h-10 flex items-center justify-center text-[var(--white)]"
             aria-label="Open menu"
           >
             <HiMenuAlt4 className="text-xl" />
