@@ -161,7 +161,7 @@ export const About = () => {
   return (
     <>
       {/* ABOUT */}
-      <section id="about" className="py-24 md:py-32 bg-[var(--black)]">
+      <section id="about" className="py-24 md:py-32 bg-[var(--red-dark)]">
         <div className="container-wide">
           <RevealOnScroll>
             <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20">
@@ -218,7 +218,7 @@ export const About = () => {
       <section id="experience" className="py-24 md:py-32 bg-[var(--red)]">
         <div className="container-wide">
           <RevealOnScroll>
-            <p className="section-label mb-4" style={{ color: "var(--black)" }}>Experience</p>
+            <p className="section-label mb-4" style={{ color: "var(--red-dark)" }}>Experience</p>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--white)] uppercase leading-[1.05] mb-16">
               Where I've <span className="text-[var(--green)]">worked</span>
             </h2>
@@ -230,7 +230,7 @@ export const About = () => {
                 <div
                   key={exp.role + exp.company}
                   data-stagger-item
-                  className="bg-[var(--black)] border border-[var(--black-border)] p-6 md:p-8 grid md:grid-cols-[200px_1fr] gap-6 hover:border-[var(--green)] transition-colors"
+                  className="bg-[var(--red-dark)] border border-[var(--red-border)] p-6 md:p-8 grid md:grid-cols-[200px_1fr] gap-6 hover:border-[var(--green)] transition-colors"
                 >
                   <div>
                     <p className="font-mono text-[11px] text-[var(--white-muted)] uppercase tracking-wider mb-1">
@@ -280,12 +280,12 @@ export const About = () => {
                     )}
 
                     {exp.stack && (
-                      <div className="mt-5 pt-5 border-t border-[var(--black-border)]">
+                      <div className="mt-5 pt-5 border-t border-[var(--red-border)]">
                         <div className="flex flex-wrap gap-1.5">
                           {exp.stack.map((tech) => (
                             <span
                               key={tech}
-                              className="font-mono text-[10px] text-[var(--white-muted)] border border-[var(--black-border)] px-2 py-1 uppercase tracking-wider"
+                              className="font-mono text-[10px] text-[var(--white-muted)] border border-[var(--red-border)] px-2 py-1 uppercase tracking-wider"
                             >
                               {tech}
                             </span>
@@ -302,8 +302,8 @@ export const About = () => {
           {/* Education */}
           <RevealOnScroll>
             <div className="mt-16">
-              <p className="section-label mb-4" style={{ color: "var(--black)" }}>Education</p>
-              <div className="bg-[var(--black)] border border-[var(--black-border)] p-6 md:p-8 grid md:grid-cols-[200px_1fr] gap-6">
+              <p className="section-label mb-4" style={{ color: "var(--red-dark)" }}>Education</p>
+              <div className="bg-[var(--red-dark)] border border-[var(--red-border)] p-6 md:p-8 grid md:grid-cols-[200px_1fr] gap-6">
                 <div>
                   <p className="font-mono text-[11px] text-[var(--white-muted)] uppercase tracking-wider">
                     {education.period}
@@ -327,7 +327,7 @@ export const About = () => {
       </section>
 
       {/* TECH STACK */}
-      <section className="py-24 md:py-32 bg-[var(--black)]">
+      <section className="py-24 md:py-32 bg-[var(--red-dark)]">
         <div className="container-wide">
           <RevealOnScroll>
             <p className="section-label mb-4">Stack</p>
@@ -342,7 +342,7 @@ export const About = () => {
                 <div
                   key={category}
                   data-stagger-item
-                  className="border border-[var(--black-border)] p-6 hover:border-[var(--green)] transition-colors"
+                  className="border border-[var(--red-border)] p-6 hover:border-[var(--green)] transition-colors"
                 >
                   <p className="font-mono text-[10px] text-[var(--green)] uppercase tracking-wider mb-4 font-semibold">
                     {category}
@@ -351,7 +351,7 @@ export const About = () => {
                     {items.map((item) => (
                       <span
                         key={item}
-                        className="font-mono text-xs text-[var(--white-dim)] border border-[var(--black-border)] px-2.5 py-1.5 hover:text-[var(--green)] hover:border-[var(--green)]/40 transition-colors"
+                        className="font-mono text-xs text-[var(--white-dim)] border border-[var(--red-border)] px-2.5 py-1.5 hover:text-[var(--green)] hover:border-[var(--green)]/40 transition-colors"
                       >
                         {item}
                       </span>
@@ -364,13 +364,13 @@ export const About = () => {
 
           {/* Currently Exploring */}
           <RevealOnScroll>
-            <div className="mt-16 border-t border-[var(--black-border)] pt-12">
+            <div className="mt-16 border-t border-[var(--red-border)] pt-12">
               <p className="section-label mb-6">Currently Exploring</p>
               <div className="flex flex-wrap gap-3">
                 {exploring.map((item) => (
                   <span
                     key={item}
-                    className="text-sm font-semibold text-[var(--black)] bg-[var(--green)] px-4 py-2 uppercase tracking-wider"
+                    className="text-sm font-semibold text-[var(--red-dark)] bg-[var(--green)] px-4 py-2 uppercase tracking-wider"
                   >
                     {item}
                   </span>
@@ -385,7 +385,7 @@ export const About = () => {
       <section className="py-24 md:py-32 bg-[var(--red)]">
         <div className="container-wide">
           <RevealOnScroll>
-            <p className="section-label mb-4" style={{ color: "var(--black)" }}>Writing</p>
+            <p className="section-label mb-4" style={{ color: "var(--red-dark)" }}>Writing</p>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--white)] uppercase leading-[1.05] mb-12">
               Blog <span className="text-[var(--green)]">posts</span>
             </h2>

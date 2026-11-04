@@ -9,7 +9,7 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center pt-20 pb-8 overflow-hidden bg-[var(--black)]"
+      className="relative min-h-screen flex flex-col justify-center pt-20 pb-8 overflow-hidden bg-[var(--red)]"
     >
       <div className="container-wide relative z-10 w-full flex-1 flex flex-col justify-center">
         <div
@@ -48,13 +48,13 @@ export const Home = () => {
         >
           <a
             href="#work"
-            className="text-sm font-semibold text-[var(--black)] bg-[var(--green)] px-6 py-3 hover:bg-[var(--green-dim)] transition-colors uppercase tracking-wider"
+            className="text-sm font-semibold text-[var(--red-dark)] bg-[var(--green)] px-6 py-3 hover:bg-[var(--green-dim)] transition-colors uppercase tracking-wider"
           >
             View Work
           </a>
           <a
             href="#contact"
-            className="text-sm font-semibold text-[var(--white)] border-2 border-[var(--white)] px-6 py-3 hover:bg-[var(--white)] hover:text-[var(--black)] transition-colors uppercase tracking-wider"
+            className="text-sm font-semibold text-[var(--white)] border-2 border-[var(--white)] px-6 py-3 hover:bg-[var(--white)] hover:text-[var(--red-dark)] transition-colors uppercase tracking-wider"
           >
             Contact me
           </a>
@@ -73,7 +73,7 @@ export const Home = () => {
       </div>
 
       <div
-        className="w-full border-t border-[var(--black-border)] pt-6 animate-fade-in-up"
+        className="w-full border-t border-[var(--red-border)] pt-6 animate-fade-in-up"
         style={{ opacity: 0, animationDelay: "600ms" }}
       >
         <div className="marquee">

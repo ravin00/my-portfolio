@@ -44,7 +44,7 @@ export const Contact = () => {
           <RevealOnScroll>
             <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20">
               <div>
-                <p className="section-label mb-4" style={{ color: "var(--black)" }}>Contact</p>
+                <p className="section-label mb-4" style={{ color: "var(--red-dark)" }}>Contact</p>
                 <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--white)] uppercase leading-[1.05] mb-6">
                   Say <span className="text-[var(--green)]">hello.</span>
                 </h2>
@@ -58,7 +58,7 @@ export const Contact = () => {
                     href="mailto:bandararavin7@gmail.com"
                     className="flex items-center gap-4 group border border-[var(--white)]/20 p-4 hover:border-[var(--green)] transition-colors"
                   >
-                    <div className="w-10 h-10 flex items-center justify-center bg-[var(--black)] flex-shrink-0">
+                    <div className="w-10 h-10 flex items-center justify-center bg-[var(--red-dark)] flex-shrink-0">
                       <FaEnvelope className="text-[var(--green)]" />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -73,7 +73,7 @@ export const Contact = () => {
                   </a>
 
                   <div className="flex items-center gap-4 border border-[var(--white)]/20 p-4">
-                    <div className="w-10 h-10 flex items-center justify-center bg-[var(--black)] flex-shrink-0">
+                    <div className="w-10 h-10 flex items-center justify-center bg-[var(--red-dark)] flex-shrink-0">
                       <span className="text-[var(--green)] text-sm font-mono font-bold">LK</span>
                     </div>
                     <div>
@@ -100,7 +100,7 @@ export const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-[var(--black)] border border-[var(--black-border)] p-6 md:p-8">
+              <div className="bg-[var(--red-dark)] border border-[var(--red-border)] p-6 md:p-8">
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
@@ -114,7 +114,7 @@ export const Contact = () => {
                         value={formData.name}
                         required
                         placeholder="Your name"
-                        className="w-full px-4 py-3 bg-transparent border border-[var(--black-border)] text-[var(--white)] text-sm placeholder:text-[var(--white-muted)] focus:border-[var(--green)] focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-transparent border border-[var(--red-border)] text-[var(--white)] text-sm placeholder:text-[var(--white-muted)] focus:border-[var(--green)] focus:outline-none transition-colors"
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       />
                     </div>
@@ -129,7 +129,7 @@ export const Contact = () => {
                         value={formData.email}
                         required
                         placeholder="you@example.com"
-                        className="w-full px-4 py-3 bg-transparent border border-[var(--black-border)] text-[var(--white)] text-sm placeholder:text-[var(--white-muted)] focus:border-[var(--green)] focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-transparent border border-[var(--red-border)] text-[var(--white)] text-sm placeholder:text-[var(--white-muted)] focus:border-[var(--green)] focus:outline-none transition-colors"
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       />
                     </div>
@@ -146,7 +146,7 @@ export const Contact = () => {
                       required
                       rows={6}
                       placeholder="Tell me about what you're working on..."
-                      className="w-full px-4 py-3 bg-transparent border border-[var(--black-border)] text-[var(--white)] text-sm placeholder:text-[var(--white-muted)] focus:border-[var(--green)] focus:outline-none transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-transparent border border-[var(--red-border)] text-[var(--white)] text-sm placeholder:text-[var(--white-muted)] focus:border-[var(--green)] focus:outline-none transition-colors resize-none"
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     />
                   </div>
@@ -154,7 +154,7 @@ export const Contact = () => {
                   <button
                     type="submit"
                     disabled={status.loading}
-                    className="w-full text-sm font-semibold text-[var(--black)] bg-[var(--green)] px-6 py-3.5 hover:bg-[var(--green-dim)] transition-colors uppercase tracking-wider disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="w-full text-sm font-semibold text-[var(--red-dark)] bg-[var(--green)] px-6 py-3.5 hover:bg-[var(--green-dim)] transition-colors uppercase tracking-wider disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {status.loading ? "Sending..." : "Send Message"}
                   </button>
@@ -180,7 +180,7 @@ export const Contact = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[var(--black)] border-t border-[var(--black-border)] py-8">
+      <footer className="bg-[var(--red-dark)] border-t border-[var(--red-border)] py-8">
         <div className="container-wide flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-mono text-[10px] text-[var(--white-muted)] uppercase tracking-wider">
             &copy; {new Date().getFullYear()} Ravin Bandara

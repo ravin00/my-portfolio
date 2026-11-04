@@ -2,16 +2,15 @@
 
 :root {
   --red: #F42902;
-  --red-dark: #c22000;
+  --red-dark: #d12400;
+  --red-darker: #b01e00;
+  --red-border: rgba(253, 253, 255, 0.15);
   --green: #83FD80;
   --green-dim: #6ee06b;
   --white: #FDFDFF;
   --white-dim: rgba(253, 253, 255, 0.7);
   --white-muted: rgba(253, 253, 255, 0.45);
   --black: #0a0a0a;
-  --black-light: #141414;
-  --black-lighter: #1e1e1e;
-  --black-border: #2a2a2a;
 }
 
 * {
@@ -37,7 +36,7 @@ body {
   font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--black);
+  background: var(--red);
   color: var(--white);
   overflow-x: hidden;
   line-height: 1.6;
@@ -113,13 +112,13 @@ body {
 }
 
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--black); }
-::-webkit-scrollbar-thumb { background: var(--black-border); border-radius: 8px; }
-::-webkit-scrollbar-thumb:hover { background: #444; }
+::-webkit-scrollbar-track { background: var(--red-dark); }
+::-webkit-scrollbar-thumb { background: rgba(253, 253, 255, 0.25); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(253, 253, 255, 0.4); }
 
 ::selection {
   background: var(--green);
-  color: var(--black);
+  color: var(--red);
 }
 
 :focus-visible {

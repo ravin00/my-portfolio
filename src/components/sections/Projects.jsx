@@ -136,7 +136,7 @@ export const Projects = () => {
   }, [activeFilter]);
 
   return (
-    <section id="work" className="py-24 md:py-32 bg-[var(--black-light)]">
+    <section id="work" className="py-24 md:py-32 bg-[var(--red)]">
       <div className="container-wide">
         <RevealOnScroll>
           <div className="max-w-2xl mb-16">
@@ -156,11 +156,11 @@ export const Projects = () => {
               <article
                 key={project.title}
                 data-stagger-item
-                className="bg-[var(--black)] border border-[var(--black-border)] p-6 md:p-10 grid lg:grid-cols-[1.15fr_0.85fr] gap-8 hover:border-[var(--green)] transition-colors"
+                className="bg-[var(--red-dark)] border border-[var(--red-border)] p-6 md:p-10 grid lg:grid-cols-[1.15fr_0.85fr] gap-8 hover:border-[var(--green)] transition-colors"
               >
                 <div>
                   <div className="flex items-center gap-3 mb-3 flex-wrap">
-                    <span className="font-mono text-[10px] font-semibold text-[var(--black)] bg-[var(--green)] px-2 py-1 uppercase tracking-wider">
+                    <span className="font-mono text-[10px] font-semibold text-[var(--red-dark)] bg-[var(--green)] px-2 py-1 uppercase tracking-wider">
                       Featured
                     </span>
                     <span className="font-mono text-[10px] text-[var(--white-muted)] uppercase tracking-wider">
@@ -223,7 +223,7 @@ export const Projects = () => {
                     {project.stack.map((tech) => (
                       <span
                         key={tech}
-                        className="font-mono text-[10px] text-[var(--white-muted)] border border-[var(--black-border)] px-2 py-1 uppercase tracking-wider"
+                        className="font-mono text-[10px] text-[var(--white-muted)] border border-[var(--red-border)] px-2 py-1 uppercase tracking-wider"
                       >
                         {tech}
                       </span>
@@ -236,7 +236,7 @@ export const Projects = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--black)] bg-[var(--green)] px-4 py-2 hover:bg-[var(--green-dim)] transition-colors uppercase tracking-wider"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--red-dark)] bg-[var(--green)] px-4 py-2 hover:bg-[var(--green-dim)] transition-colors uppercase tracking-wider"
                       >
                         <FaGithub /> Code
                       </a>
@@ -244,7 +244,7 @@ export const Projects = () => {
                   </div>
                 </div>
 
-                <div className="border border-[var(--black-border)] bg-[var(--black-light)] p-6">
+                <div className="border border-[var(--red-border)] bg-[var(--red)] p-6">
                   <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--green)] mb-4">
                     Outcome signals
                   </p>
@@ -275,8 +275,8 @@ export const Projects = () => {
                   onClick={() => setActiveFilter(chip)}
                   className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider transition-colors ${
                     activeFilter === chip
-                      ? "bg-[var(--green)] text-[var(--black)]"
-                      : "text-[var(--white-muted)] hover:text-[var(--green)] border border-[var(--black-border)]"
+                      ? "bg-[var(--green)] text-[var(--red-dark)]"
+                      : "text-[var(--white-muted)] hover:text-[var(--green)] border border-[var(--red-border)]"
                   }`}
                 >
                   {chip}
@@ -293,7 +293,7 @@ export const Projects = () => {
                 href={project.github !== "#" ? project.github : undefined}
                 target={project.github !== "#" ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                className="bg-[var(--black)] border border-[var(--black-border)] p-6 block group hover:border-[var(--green)] transition-colors"
+                className="bg-[var(--red-dark)] border border-[var(--red-border)] p-6 block group hover:border-[var(--green)] transition-colors"
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="font-mono text-[10px] text-[var(--white-muted)] uppercase tracking-wider">
@@ -314,7 +314,7 @@ export const Projects = () => {
                   {project.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="font-mono text-[10px] text-[var(--white-muted)] border border-[var(--black-border)] px-2 py-0.5 uppercase tracking-wider"
+                      className="font-mono text-[10px] text-[var(--white-muted)] border border-[var(--red-border)] px-2 py-0.5 uppercase tracking-wider"
                     >
                       {tech}
                     </span>
@@ -329,7 +329,7 @@ export const Projects = () => {
               href="https://github.com/ravin00"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--black)] bg-[var(--green)] px-6 py-3 hover:bg-[var(--green-dim)] transition-colors uppercase tracking-wider"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--red-dark)] bg-[var(--green)] px-6 py-3 hover:bg-[var(--green-dim)] transition-colors uppercase tracking-wider"
             >
               <FaGithub /> All Repositories
             </a>

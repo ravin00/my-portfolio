@@ -26,7 +26,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
     <nav
       className={`fixed top-0 w-full z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-[var(--black)]/95 backdrop-blur-md border-b border-[var(--black-border)]"
+          ? "bg-[var(--red-dark)]/95 backdrop-blur-md border-b border-[var(--red-border)]"
           : "bg-transparent"
       }`}
     >
@@ -51,7 +51,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
             ))}
             <a
               href="#contact"
-              className="text-sm font-semibold text-[var(--black)] bg-[var(--green)] px-5 py-2.5 hover:bg-[var(--green-dim)] transition-colors"
+              className="text-sm font-semibold text-[var(--red-dark)] bg-[var(--green)] px-5 py-2.5 hover:bg-[var(--green-dim)] transition-colors"
             >
               Let's Talk
             </a>
