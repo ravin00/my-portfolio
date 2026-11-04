@@ -12,12 +12,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-  }, [menuOpen]);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
+    const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -26,7 +21,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
     <nav
       className={`fixed top-0 w-full z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-[var(--red-dark)]/95 backdrop-blur-md border-b border-[var(--red-border)]"
+          ? "bg-[var(--white)]/95 backdrop-blur-md border-b border-[var(--gray-border)]"
           : "bg-transparent"
       }`}
     >
@@ -34,24 +29,24 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <a
             href="#home"
-            className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[var(--green)]"
+            className="font-display text-sm tracking-wide uppercase text-[var(--red)]"
           >
-            RAVIN BANDARA<span className="text-[var(--white-muted)]">&reg;</span>
+            RAVIN BANDARA<span className="text-[var(--text-muted)]">&reg;</span>
           </a>
 
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm text-[var(--white-dim)] hover:text-[var(--green)] transition-colors font-medium"
+                className="text-sm text-[var(--text-dim)] hover:text-[var(--red)] transition-colors font-medium"
               >
                 {item.label}
               </a>
             ))}
             <a
               href="#contact"
-              className="text-sm font-semibold text-[var(--red-dark)] bg-[var(--green)] px-5 py-2.5 hover:bg-[var(--green-dim)] transition-colors"
+              className="text-sm font-semibold text-[var(--white)] bg-[var(--red)] px-5 py-2.5 hover:bg-[var(--red-dark)] transition-colors"
             >
               Let's Talk
             </a>
@@ -59,7 +54,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
 
           <button
             onClick={() => setMenuOpen((prev) => !prev)}
-            className="md:hidden w-10 h-10 flex items-center justify-center text-[var(--white)]"
+            className="md:hidden w-10 h-10 flex items-center justify-center text-[var(--text)]"
             aria-label="Open menu"
           >
             <HiMenuAlt4 className="text-xl" />

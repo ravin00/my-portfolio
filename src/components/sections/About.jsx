@@ -161,17 +161,17 @@ export const About = () => {
   return (
     <>
       {/* ABOUT */}
-      <section id="about" className="py-24 md:py-32 bg-[var(--red-dark)]">
+      <section id="about" className="py-24 md:py-32 bg-[var(--white-bg)]">
         <div className="container-wide">
           <RevealOnScroll>
             <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20">
               <div>
                 <p className="section-label mb-4">About</p>
-                <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--white)] uppercase leading-[1.05] mb-6">
+                <h2 className="font-display text-4xl md:text-5xl tracking-tight text-[var(--text)] uppercase leading-[1.05] mb-6">
                   DevOps engineer{" "}
-                  <span className="text-[var(--green)]">who can also build the app.</span>
+                  <span className="text-[var(--red)]">who can also build the app.</span>
                 </h2>
-                <div className="space-y-4 text-[var(--white-dim)] leading-relaxed">
+                <div className="space-y-4 text-[var(--text-dim)] leading-relaxed">
                   <p>
                     I'm a DevOps Engineer with a full-stack development background.
                     I work with Kubernetes, Docker, Terraform and AWS to build and
@@ -192,17 +192,17 @@ export const About = () => {
               </div>
 
               <div className="relative">
-                <div className="relative overflow-hidden border-2 border-[var(--green)] aspect-[4/5] max-w-md mx-auto">
+                <div className="relative overflow-hidden border-2 border-[var(--red)] aspect-[4/5] max-w-md mx-auto">
                   <img
                     src={ravinPhoto}
                     alt="Ravin Bandara"
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-[var(--red)] px-4 py-3 flex items-center justify-between">
-                    <span className="font-mono text-[10px] text-[var(--white)] uppercase tracking-wider">
+                    <span className="font-pixel text-[10px] text-[var(--white)] uppercase tracking-wider">
                       Colombo, Sri Lanka
                     </span>
-                    <span className="font-mono text-[10px] text-[var(--green)] uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="font-pixel text-[10px] text-[var(--green)] uppercase tracking-wider flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[var(--green)]" />
                       Open to work
                     </span>
@@ -215,12 +215,12 @@ export const About = () => {
       </section>
 
       {/* EXPERIENCE */}
-      <section id="experience" className="py-24 md:py-32 bg-[var(--red)]">
+      <section id="experience" className="py-24 md:py-32 bg-[var(--white)]">
         <div className="container-wide">
           <RevealOnScroll>
-            <p className="section-label mb-4" style={{ color: "var(--red-dark)" }}>Experience</p>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--white)] uppercase leading-[1.05] mb-16">
-              Where I've <span className="text-[var(--green)]">worked</span>
+            <p className="section-label mb-4">Experience</p>
+            <h2 className="font-display text-4xl md:text-5xl tracking-tight text-[var(--text)] uppercase leading-[1.05] mb-16">
+              Where I've <span className="text-[var(--red)]">worked</span>
             </h2>
           </RevealOnScroll>
 
@@ -230,19 +230,19 @@ export const About = () => {
                 <div
                   key={exp.role + exp.company}
                   data-stagger-item
-                  className="bg-[var(--red-dark)] border border-[var(--red-border)] p-6 md:p-8 grid md:grid-cols-[200px_1fr] gap-6 hover:border-[var(--green)] transition-colors"
+                  className="bg-[var(--white)] border border-[var(--gray-border)] p-6 md:p-8 grid md:grid-cols-[200px_1fr] gap-6 hover:border-[var(--red)] transition-colors"
                 >
                   <div>
-                    <p className="font-mono text-[11px] text-[var(--white-muted)] uppercase tracking-wider mb-1">
+                    <p className="font-pixel text-[11px] text-[var(--text-muted)] uppercase tracking-wider mb-1">
                       {exp.period}
                     </p>
-                    <p className="text-xs text-[var(--white-muted)]">{exp.type}</p>
+                    <p className="text-xs text-[var(--text-muted)]">{exp.type}</p>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-[var(--white)]">
+                    <h3 className="text-lg font-bold text-[var(--text)]">
                       {exp.role}
                     </h3>
-                    <p className="text-sm text-[var(--green)] font-semibold mb-4">
+                    <p className="text-sm text-[var(--red)] font-semibold mb-4">
                       {exp.company}
                     </p>
 
@@ -250,14 +250,14 @@ export const About = () => {
                       <div className="space-y-5">
                         {exp.groups.map((group) => (
                           <div key={group.title}>
-                            <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--green)] font-semibold mb-2">
+                            <p className="font-pixel text-[10px] uppercase tracking-wider text-[var(--red)] font-semibold mb-2">
                               {group.title}
                             </p>
                             <ul className="space-y-1.5">
                               {group.items.map((item, i) => (
                                 <li
                                   key={i}
-                                  className="text-sm text-[var(--white-dim)] leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-px before:bg-[var(--green)]"
+                                  className="text-sm text-[var(--text-dim)] leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-px before:bg-[var(--red)]"
                                 >
                                   {item}
                                 </li>
@@ -271,7 +271,7 @@ export const About = () => {
                         {exp.highlights.map((h, i) => (
                           <li
                             key={i}
-                            className="text-sm text-[var(--white-dim)] leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-px before:bg-[var(--green)]"
+                            className="text-sm text-[var(--text-dim)] leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-px before:bg-[var(--red)]"
                           >
                             {h}
                           </li>
@@ -280,12 +280,12 @@ export const About = () => {
                     )}
 
                     {exp.stack && (
-                      <div className="mt-5 pt-5 border-t border-[var(--red-border)]">
+                      <div className="mt-5 pt-5 border-t border-[var(--gray-border)]">
                         <div className="flex flex-wrap gap-1.5">
                           {exp.stack.map((tech) => (
                             <span
                               key={tech}
-                              className="font-mono text-[10px] text-[var(--white-muted)] border border-[var(--red-border)] px-2 py-1 uppercase tracking-wider"
+                              className="font-pixel text-[10px] text-[var(--text-muted)] border border-[var(--gray-border)] px-2 py-1 uppercase tracking-wider"
                             >
                               {tech}
                             </span>
@@ -302,21 +302,21 @@ export const About = () => {
           {/* Education */}
           <RevealOnScroll>
             <div className="mt-16">
-              <p className="section-label mb-4" style={{ color: "var(--red-dark)" }}>Education</p>
-              <div className="bg-[var(--red-dark)] border border-[var(--red-border)] p-6 md:p-8 grid md:grid-cols-[200px_1fr] gap-6">
+              <p className="section-label mb-4">Education</p>
+              <div className="bg-[var(--white)] border border-[var(--gray-border)] p-6 md:p-8 grid md:grid-cols-[200px_1fr] gap-6">
                 <div>
-                  <p className="font-mono text-[11px] text-[var(--white-muted)] uppercase tracking-wider">
+                  <p className="font-pixel text-[11px] text-[var(--text-muted)] uppercase tracking-wider">
                     {education.period}
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-[var(--white)]">
+                  <h3 className="text-lg font-bold text-[var(--text)]">
                     {education.degree}
                   </h3>
-                  <p className="text-sm text-[var(--green)] font-semibold mb-1">
+                  <p className="text-sm text-[var(--red)] font-semibold mb-1">
                     {education.school}
                   </p>
-                  <p className="text-sm text-[var(--white-muted)]">
+                  <p className="text-sm text-[var(--text-muted)]">
                     {education.specialization}
                   </p>
                 </div>
@@ -327,12 +327,12 @@ export const About = () => {
       </section>
 
       {/* TECH STACK */}
-      <section className="py-24 md:py-32 bg-[var(--red-dark)]">
+      <section className="py-24 md:py-32 bg-[var(--white-bg)]">
         <div className="container-wide">
           <RevealOnScroll>
             <p className="section-label mb-4">Stack</p>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--white)] uppercase leading-[1.05] mb-16">
-              Tools I <span className="text-[var(--green)]">build with</span>
+            <h2 className="font-display text-4xl md:text-5xl tracking-tight text-[var(--text)] uppercase leading-[1.05] mb-16">
+              Tools I <span className="text-[var(--red)]">build with</span>
             </h2>
           </RevealOnScroll>
 
@@ -342,16 +342,16 @@ export const About = () => {
                 <div
                   key={category}
                   data-stagger-item
-                  className="border border-[var(--red-border)] p-6 hover:border-[var(--green)] transition-colors"
+                  className="border border-[var(--gray-border)] p-6 hover:border-[var(--red)] transition-colors"
                 >
-                  <p className="font-mono text-[10px] text-[var(--green)] uppercase tracking-wider mb-4 font-semibold">
+                  <p className="font-pixel text-[10px] text-[var(--red)] uppercase tracking-wider mb-4 font-semibold">
                     {category}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {items.map((item) => (
                       <span
                         key={item}
-                        className="font-mono text-xs text-[var(--white-dim)] border border-[var(--red-border)] px-2.5 py-1.5 hover:text-[var(--green)] hover:border-[var(--green)]/40 transition-colors"
+                        className="font-mono text-xs text-[var(--text-dim)] border border-[var(--gray-border)] px-2.5 py-1.5 hover:text-[var(--red)] hover:border-[var(--red)]/40 transition-colors"
                       >
                         {item}
                       </span>
@@ -364,13 +364,13 @@ export const About = () => {
 
           {/* Currently Exploring */}
           <RevealOnScroll>
-            <div className="mt-16 border-t border-[var(--red-border)] pt-12">
+            <div className="mt-16 border-t border-[var(--gray-border)] pt-12">
               <p className="section-label mb-6">Currently Exploring</p>
               <div className="flex flex-wrap gap-3">
                 {exploring.map((item) => (
                   <span
                     key={item}
-                    className="text-sm font-semibold text-[var(--red-dark)] bg-[var(--green)] px-4 py-2 uppercase tracking-wider"
+                    className="text-sm font-semibold text-[var(--white)] bg-[var(--green)] px-4 py-2 uppercase tracking-wider"
                   >
                     {item}
                   </span>
@@ -385,8 +385,8 @@ export const About = () => {
       <section className="py-24 md:py-32 bg-[var(--red)]">
         <div className="container-wide">
           <RevealOnScroll>
-            <p className="section-label mb-4" style={{ color: "var(--red-dark)" }}>Writing</p>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--white)] uppercase leading-[1.05] mb-12">
+            <p className="section-label mb-4" style={{ color: "var(--green)" }}>Writing</p>
+            <h2 className="font-display text-4xl md:text-5xl tracking-tight text-[var(--white)] uppercase leading-[1.05] mb-12">
               Blog <span className="text-[var(--green)]">posts</span>
             </h2>
           </RevealOnScroll>

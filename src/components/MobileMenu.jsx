@@ -20,8 +20,8 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
     >
       <div className="px-4 h-full flex flex-col">
         <div className="flex items-center justify-between h-16">
-          <span className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[var(--green)]">
-            RAVIN BANDARA<span className="text-[var(--white-muted)]">&reg;</span>
+          <span className="font-display text-sm tracking-wide uppercase text-[var(--white)]">
+            RAVIN BANDARA
           </span>
           <button
             onClick={() => setMenuOpen(false)}
@@ -38,7 +38,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
               key={item.href}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className={`text-5xl font-black uppercase text-[var(--white)] tracking-tight py-1 transition-all duration-500 hover:text-[var(--green)] ${
+              className={`font-display text-5xl uppercase text-[var(--white)] tracking-tight py-1 transition-all duration-500 hover:text-[var(--green)] ${
                 menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
               style={{ transitionDelay: menuOpen ? `${i * 50 + 100}ms` : "0ms" }}

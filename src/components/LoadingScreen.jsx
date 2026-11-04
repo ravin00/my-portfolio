@@ -8,7 +8,7 @@ export const LoadingScreen = ({ onComplete }) => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
-          setTimeout(onComplete, 300);
+          setTimeout(onComplete, 200);
           return 100;
         }
         return prev + 3;
@@ -18,18 +18,18 @@ export const LoadingScreen = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[var(--red)]">
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[var(--white)]">
       <div className="text-center">
-        <div className="font-mono text-sm font-semibold tracking-widest text-[var(--green)] uppercase mb-8">
+        <div className="font-display text-2xl tracking-wide text-[var(--red)] uppercase mb-8">
           RAVIN BANDARA
         </div>
-        <div className="w-48 h-[1px] bg-[var(--red-border)] overflow-hidden mb-4">
+        <div className="w-48 h-[2px] bg-[var(--gray-light)] overflow-hidden mb-4">
           <div
-            className="h-full bg-[var(--green)] transition-all duration-75 ease-out"
+            className="h-full bg-[var(--red)] transition-all duration-75 ease-out"
             style={{ width: `${progress}%` }}
           />
         </div>
-        <p className="font-mono text-[10px] text-[var(--white-muted)] tracking-wider">
+        <p className="font-pixel text-xs text-[var(--text-muted)] tracking-wider">
           {String(Math.min(progress, 100)).padStart(3, "0")}
         </p>
       </div>

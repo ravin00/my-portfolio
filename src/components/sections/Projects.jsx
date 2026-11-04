@@ -136,15 +136,15 @@ export const Projects = () => {
   }, [activeFilter]);
 
   return (
-    <section id="work" className="py-24 md:py-32 bg-[var(--red)]">
+    <section id="work" className="py-24 md:py-32 bg-[var(--white-bg)]">
       <div className="container-wide">
         <RevealOnScroll>
           <div className="max-w-2xl mb-16">
             <p className="section-label mb-4">Work</p>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--white)] uppercase leading-[1.05] mb-4">
-              Selected <span className="text-[var(--green)]">projects</span>
+            <h2 className="text-4xl md:text-5xl font-display font-normal tracking-tight text-[var(--text)] uppercase leading-[1.05] mb-4">
+              Selected <span className="text-[var(--red)]">projects</span>
             </h2>
-            <p className="text-lg text-[var(--white-dim)] leading-relaxed">
+            <p className="text-lg text-[var(--text-dim)] leading-relaxed">
               Product-focused builds framed with the problem, the approach and the outcome.
             </p>
           </div>
@@ -156,31 +156,31 @@ export const Projects = () => {
               <article
                 key={project.title}
                 data-stagger-item
-                className="bg-[var(--red-dark)] border border-[var(--red-border)] p-6 md:p-10 grid lg:grid-cols-[1.15fr_0.85fr] gap-8 hover:border-[var(--green)] transition-colors"
+                className="bg-[var(--white)] border border-[var(--gray-border)] p-6 md:p-10 grid lg:grid-cols-[1.15fr_0.85fr] gap-8 hover:border-[var(--red)] transition-colors"
               >
                 <div>
                   <div className="flex items-center gap-3 mb-3 flex-wrap">
-                    <span className="font-mono text-[10px] font-semibold text-[var(--red-dark)] bg-[var(--green)] px-2 py-1 uppercase tracking-wider">
+                    <span className="font-mono text-[10px] font-semibold text-[var(--white)] bg-[var(--red)] px-2 py-1 uppercase tracking-wider">
                       Featured
                     </span>
-                    <span className="font-mono text-[10px] text-[var(--white-muted)] uppercase tracking-wider">
+                    <span className="font-mono text-[10px] text-[var(--text-muted)] uppercase tracking-wider">
                       {project.category}
                     </span>
                     {project.status === "In Progress" && (
-                      <span className="font-mono text-[10px] text-[var(--green)] border border-[var(--green)]/30 px-2 py-0.5 uppercase tracking-wider flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--green)]" />
+                      <span className="font-mono text-[10px] text-[var(--red)] border border-[var(--red)]/30 px-2 py-0.5 uppercase tracking-wider flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--red)]" />
                         {project.status}
                       </span>
                     )}
-                    <span className="font-mono text-[10px] text-[var(--white-muted)] ml-auto tracking-wider">
+                    <span className="font-mono text-[10px] text-[var(--text-muted)] ml-auto tracking-wider">
                       {project.period}
                     </span>
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-black text-[var(--white)] uppercase tracking-tight">
+                  <h3 className="text-2xl md:text-3xl font-display font-normal text-[var(--text)] uppercase tracking-tight">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-[var(--white-muted)] mb-6">
+                  <p className="text-sm text-[var(--text-muted)] mb-6">
                     {project.tagline}
                   </p>
 
@@ -191,10 +191,10 @@ export const Projects = () => {
                       ["Impact", project.impact],
                     ].map(([label, text]) => (
                       <div key={label}>
-                        <dt className="font-mono text-[10px] uppercase tracking-wider text-[var(--green)] mb-1">
+                        <dt className="font-mono text-[10px] uppercase tracking-wider text-[var(--red)] mb-1">
                           {label}
                         </dt>
-                        <dd className="text-sm text-[var(--white-dim)] leading-relaxed">
+                        <dd className="text-sm text-[var(--text-dim)] leading-relaxed">
                           {text}
                         </dd>
                       </div>
@@ -203,14 +203,14 @@ export const Projects = () => {
 
                   {project.features && (
                     <div className="mb-6">
-                      <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--green)] mb-2">
+                      <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--red)] mb-2">
                         Key features
                       </p>
                       <ul className="space-y-1.5">
                         {project.features.map((f) => (
                           <li
                             key={f}
-                            className="text-sm text-[var(--white-dim)] leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-px before:bg-[var(--green)]"
+                            className="text-sm text-[var(--text-dim)] leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-px before:bg-[var(--red)]"
                           >
                             {f}
                           </li>
@@ -223,7 +223,7 @@ export const Projects = () => {
                     {project.stack.map((tech) => (
                       <span
                         key={tech}
-                        className="font-mono text-[10px] text-[var(--white-muted)] border border-[var(--red-border)] px-2 py-1 uppercase tracking-wider"
+                        className="font-mono text-[10px] text-[var(--text-muted)] border border-[var(--gray-border)] px-2 py-1 uppercase tracking-wider"
                       >
                         {tech}
                       </span>
@@ -236,7 +236,7 @@ export const Projects = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--red-dark)] bg-[var(--green)] px-4 py-2 hover:bg-[var(--green-dim)] transition-colors uppercase tracking-wider"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--white)] bg-[var(--red)] px-4 py-2 hover:bg-[var(--red-dark)] transition-colors uppercase tracking-wider"
                       >
                         <FaGithub /> Code
                       </a>
@@ -244,14 +244,14 @@ export const Projects = () => {
                   </div>
                 </div>
 
-                <div className="border border-[var(--red-border)] bg-[var(--red)] p-6">
-                  <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--green)] mb-4">
+                <div className="border border-[var(--gray-border)] bg-[var(--white-bg)] p-6">
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--red)] mb-4">
                     Outcome signals
                   </p>
                   <ul className="space-y-3">
                     {project.metrics.map((metric) => (
-                      <li key={metric} className="flex gap-3 text-sm text-[var(--white-dim)]">
-                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--green)] flex-shrink-0" />
+                      <li key={metric} className="flex gap-3 text-sm text-[var(--text-dim)]">
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--red)] flex-shrink-0" />
                         {metric}
                       </li>
                     ))}
@@ -264,7 +264,7 @@ export const Projects = () => {
 
         <RevealOnScroll stagger delayStep={50}>
           <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
-            <h3 className="text-2xl font-black text-[var(--white)] uppercase">
+            <h3 className="text-2xl font-display font-normal text-[var(--text)] uppercase">
               More work
             </h3>
             <div className="flex gap-1">
@@ -275,8 +275,8 @@ export const Projects = () => {
                   onClick={() => setActiveFilter(chip)}
                   className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider transition-colors ${
                     activeFilter === chip
-                      ? "bg-[var(--green)] text-[var(--red-dark)]"
-                      : "text-[var(--white-muted)] hover:text-[var(--green)] border border-[var(--red-border)]"
+                      ? "bg-[var(--red)] text-[var(--white)]"
+                      : "text-[var(--text-muted)] hover:text-[var(--red)] border border-[var(--gray-border)]"
                   }`}
                 >
                   {chip}
@@ -293,28 +293,28 @@ export const Projects = () => {
                 href={project.github !== "#" ? project.github : undefined}
                 target={project.github !== "#" ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                className="bg-[var(--red-dark)] border border-[var(--red-border)] p-6 block group hover:border-[var(--green)] transition-colors"
+                className="bg-[var(--white)] border border-[var(--gray-border)] p-6 block group hover:border-[var(--red)] transition-colors"
               >
                 <div className="flex items-center justify-between mb-3">
-                  <span className="font-mono text-[10px] text-[var(--white-muted)] uppercase tracking-wider">
+                  <span className="font-mono text-[10px] text-[var(--text-muted)] uppercase tracking-wider">
                     {project.period}
                   </span>
-                  <FaGithub className="text-[var(--white-muted)] group-hover:text-[var(--green)] transition-colors" />
+                  <FaGithub className="text-[var(--text-muted)] group-hover:text-[var(--red)] transition-colors" />
                 </div>
-                <h4 className="text-lg font-bold text-[var(--white)] group-hover:text-[var(--green)] transition-colors uppercase">
+                <h4 className="text-lg font-bold text-[var(--text)] group-hover:text-[var(--red)] transition-colors uppercase">
                   {project.title}
                 </h4>
-                <p className="text-sm text-[var(--white-muted)] mb-4">
+                <p className="text-sm text-[var(--text-muted)] mb-4">
                   {project.tagline}
                 </p>
-                <p className="text-sm text-[var(--white-dim)] leading-relaxed mb-4">
+                <p className="text-sm text-[var(--text-dim)] leading-relaxed mb-4">
                   {project.summary}
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                   {project.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="font-mono text-[10px] text-[var(--white-muted)] border border-[var(--red-border)] px-2 py-0.5 uppercase tracking-wider"
+                      className="font-mono text-[10px] text-[var(--text-muted)] border border-[var(--gray-border)] px-2 py-0.5 uppercase tracking-wider"
                     >
                       {tech}
                     </span>
@@ -329,7 +329,7 @@ export const Projects = () => {
               href="https://github.com/ravin00"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--red-dark)] bg-[var(--green)] px-6 py-3 hover:bg-[var(--green-dim)] transition-colors uppercase tracking-wider"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--white)] bg-[var(--red)] px-6 py-3 hover:bg-[var(--red-dark)] transition-colors uppercase tracking-wider"
             >
               <FaGithub /> All Repositories
             </a>
