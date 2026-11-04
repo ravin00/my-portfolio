@@ -142,7 +142,7 @@ export const Projects = () => {
           <div className="max-w-2xl mb-16">
             <p className="section-label mb-4">Work</p>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--white)] uppercase leading-[1.05] mb-4">
-              Selected <span className="text-[var(--yellow)]">projects</span>
+              Selected <span className="text-[var(--green)]">projects</span>
             </h2>
             <p className="text-lg text-[var(--white-dim)] leading-relaxed">
               Product-focused builds framed with the problem, the approach and the outcome.
@@ -156,19 +156,19 @@ export const Projects = () => {
               <article
                 key={project.title}
                 data-stagger-item
-                className="bg-[var(--black)] border border-[var(--black-border)] p-6 md:p-10 grid lg:grid-cols-[1.15fr_0.85fr] gap-8 hover:border-[var(--yellow)] transition-colors"
+                className="bg-[var(--black)] border border-[var(--black-border)] p-6 md:p-10 grid lg:grid-cols-[1.15fr_0.85fr] gap-8 hover:border-[var(--green)] transition-colors"
               >
                 <div>
                   <div className="flex items-center gap-3 mb-3 flex-wrap">
-                    <span className="font-mono text-[10px] font-semibold text-[var(--black)] bg-[var(--yellow)] px-2 py-1 uppercase tracking-wider">
+                    <span className="font-mono text-[10px] font-semibold text-[var(--black)] bg-[var(--green)] px-2 py-1 uppercase tracking-wider">
                       Featured
                     </span>
                     <span className="font-mono text-[10px] text-[var(--white-muted)] uppercase tracking-wider">
                       {project.category}
                     </span>
                     {project.status === "In Progress" && (
-                      <span className="font-mono text-[10px] text-[var(--yellow)] border border-[var(--yellow)]/30 px-2 py-0.5 uppercase tracking-wider flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--yellow)]" />
+                      <span className="font-mono text-[10px] text-[var(--green)] border border-[var(--green)]/30 px-2 py-0.5 uppercase tracking-wider flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--green)]" />
                         {project.status}
                       </span>
                     )}
@@ -191,7 +191,7 @@ export const Projects = () => {
                       ["Impact", project.impact],
                     ].map(([label, text]) => (
                       <div key={label}>
-                        <dt className="font-mono text-[10px] uppercase tracking-wider text-[var(--yellow)] mb-1">
+                        <dt className="font-mono text-[10px] uppercase tracking-wider text-[var(--green)] mb-1">
                           {label}
                         </dt>
                         <dd className="text-sm text-[var(--white-dim)] leading-relaxed">
@@ -203,14 +203,14 @@ export const Projects = () => {
 
                   {project.features && (
                     <div className="mb-6">
-                      <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--yellow)] mb-2">
+                      <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--green)] mb-2">
                         Key features
                       </p>
                       <ul className="space-y-1.5">
                         {project.features.map((f) => (
                           <li
                             key={f}
-                            className="text-sm text-[var(--white-dim)] leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-px before:bg-[var(--yellow)]"
+                            className="text-sm text-[var(--white-dim)] leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-px before:bg-[var(--green)]"
                           >
                             {f}
                           </li>
@@ -236,7 +236,7 @@ export const Projects = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--black)] bg-[var(--yellow)] px-4 py-2 hover:bg-[var(--yellow-dim)] transition-colors uppercase tracking-wider"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--black)] bg-[var(--green)] px-4 py-2 hover:bg-[var(--green-dim)] transition-colors uppercase tracking-wider"
                       >
                         <FaGithub /> Code
                       </a>
@@ -245,13 +245,13 @@ export const Projects = () => {
                 </div>
 
                 <div className="border border-[var(--black-border)] bg-[var(--black-light)] p-6">
-                  <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--yellow)] mb-4">
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--green)] mb-4">
                     Outcome signals
                   </p>
                   <ul className="space-y-3">
                     {project.metrics.map((metric) => (
                       <li key={metric} className="flex gap-3 text-sm text-[var(--white-dim)]">
-                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--yellow)] flex-shrink-0" />
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--green)] flex-shrink-0" />
                         {metric}
                       </li>
                     ))}
@@ -275,8 +275,8 @@ export const Projects = () => {
                   onClick={() => setActiveFilter(chip)}
                   className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider transition-colors ${
                     activeFilter === chip
-                      ? "bg-[var(--yellow)] text-[var(--black)]"
-                      : "text-[var(--white-muted)] hover:text-[var(--yellow)] border border-[var(--black-border)]"
+                      ? "bg-[var(--green)] text-[var(--black)]"
+                      : "text-[var(--white-muted)] hover:text-[var(--green)] border border-[var(--black-border)]"
                   }`}
                 >
                   {chip}
@@ -293,15 +293,15 @@ export const Projects = () => {
                 href={project.github !== "#" ? project.github : undefined}
                 target={project.github !== "#" ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                className="bg-[var(--black)] border border-[var(--black-border)] p-6 block group hover:border-[var(--yellow)] transition-colors"
+                className="bg-[var(--black)] border border-[var(--black-border)] p-6 block group hover:border-[var(--green)] transition-colors"
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="font-mono text-[10px] text-[var(--white-muted)] uppercase tracking-wider">
                     {project.period}
                   </span>
-                  <FaGithub className="text-[var(--white-muted)] group-hover:text-[var(--yellow)] transition-colors" />
+                  <FaGithub className="text-[var(--white-muted)] group-hover:text-[var(--green)] transition-colors" />
                 </div>
-                <h4 className="text-lg font-bold text-[var(--white)] group-hover:text-[var(--yellow)] transition-colors uppercase">
+                <h4 className="text-lg font-bold text-[var(--white)] group-hover:text-[var(--green)] transition-colors uppercase">
                   {project.title}
                 </h4>
                 <p className="text-sm text-[var(--white-muted)] mb-4">
@@ -329,7 +329,7 @@ export const Projects = () => {
               href="https://github.com/ravin00"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--black)] bg-[var(--yellow)] px-6 py-3 hover:bg-[var(--yellow-dim)] transition-colors uppercase tracking-wider"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--black)] bg-[var(--green)] px-6 py-3 hover:bg-[var(--green-dim)] transition-colors uppercase tracking-wider"
             >
               <FaGithub /> All Repositories
             </a>

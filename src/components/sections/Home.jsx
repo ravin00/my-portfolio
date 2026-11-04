@@ -26,7 +26,7 @@ export const Home = () => {
           style={{ opacity: 0, animationDelay: "200ms" }}
         >
           A DevOps Engineer{" "}
-          <span className="text-[var(--yellow)]">
+          <span className="text-[var(--green)]">
             building cloud-native infrastructure and scalable systems.
           </span>
         </h1>
@@ -48,7 +48,7 @@ export const Home = () => {
         >
           <a
             href="#work"
-            className="text-sm font-semibold text-[var(--black)] bg-[var(--yellow)] px-6 py-3 hover:bg-[var(--yellow-dim)] transition-colors uppercase tracking-wider"
+            className="text-sm font-semibold text-[var(--black)] bg-[var(--green)] px-6 py-3 hover:bg-[var(--green-dim)] transition-colors uppercase tracking-wider"
           >
             View Work
           </a>
@@ -59,13 +59,13 @@ export const Home = () => {
             Contact me
           </a>
           <div className="flex items-center gap-3 ml-2">
-            <a href="https://github.com/ravin00" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-[var(--white-muted)] hover:text-[var(--yellow)] transition-colors">
+            <a href="https://github.com/ravin00" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-[var(--white-muted)] hover:text-[var(--green)] transition-colors">
               <FaGithub className="text-lg" />
             </a>
-            <a href="https://www.linkedin.com/in/ravin-bandara-/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[var(--white-muted)] hover:text-[var(--yellow)] transition-colors">
+            <a href="https://www.linkedin.com/in/ravin-bandara-/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[var(--white-muted)] hover:text-[var(--green)] transition-colors">
               <FaLinkedin className="text-lg" />
             </a>
-            <a href="https://medium.com/@ravinbandara76" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="text-[var(--white-muted)] hover:text-[var(--yellow)] transition-colors">
+            <a href="https://medium.com/@ravinbandara76" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="text-[var(--white-muted)] hover:text-[var(--green)] transition-colors">
               <FaMedium className="text-lg" />
             </a>
           </div>
@@ -92,7 +92,7 @@ export const Home = () => {
 
       <a
         href="#about"
-        className="absolute bottom-8 right-8 hidden md:flex items-center gap-2 font-mono text-[10px] text-[var(--white-muted)] hover:text-[var(--yellow)] transition-colors uppercase tracking-wider"
+        className="absolute bottom-8 right-8 hidden md:flex items-center gap-2 font-mono text-[10px] text-[var(--white-muted)] hover:text-[var(--green)] transition-colors uppercase tracking-wider"
         aria-label="Scroll down"
       >
         Scroll <FaArrowDown className="text-[8px]" />

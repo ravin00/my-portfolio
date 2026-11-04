@@ -20,12 +20,12 @@ export const LoadingScreen = ({ onComplete }) => {
   return (
     <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[var(--black)]">
       <div className="text-center">
-        <div className="font-mono text-sm font-semibold tracking-widest text-[var(--yellow)] uppercase mb-8">
+        <div className="font-mono text-sm font-semibold tracking-widest text-[var(--green)] uppercase mb-8">
           RAVIN BANDARA
         </div>
         <div className="w-48 h-[1px] bg-[var(--black-border)] overflow-hidden mb-4">
           <div
-            className="h-full bg-[var(--yellow)] transition-all duration-75 ease-out"
+            className="h-full bg-[var(--green)] transition-all duration-75 ease-out"
             style={{ width: `${progress}%` }}
           />
         </div>

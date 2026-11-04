@@ -169,7 +169,7 @@ export const About = () => {
                 <p className="section-label mb-4">About</p>
                 <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--white)] uppercase leading-[1.05] mb-6">
                   DevOps engineer{" "}
-                  <span className="text-[var(--yellow)]">who can also build the app.</span>
+                  <span className="text-[var(--green)]">who can also build the app.</span>
                 </h2>
                 <div className="space-y-4 text-[var(--white-dim)] leading-relaxed">
                   <p>
@@ -192,7 +192,7 @@ export const About = () => {
               </div>
 
               <div className="relative">
-                <div className="relative overflow-hidden border-2 border-[var(--yellow)] aspect-[4/5] max-w-md mx-auto">
+                <div className="relative overflow-hidden border-2 border-[var(--green)] aspect-[4/5] max-w-md mx-auto">
                   <img
                     src={ravinPhoto}
                     alt="Ravin Bandara"
@@ -202,8 +202,8 @@ export const About = () => {
                     <span className="font-mono text-[10px] text-[var(--white)] uppercase tracking-wider">
                       Colombo, Sri Lanka
                     </span>
-                    <span className="font-mono text-[10px] text-[var(--yellow)] uppercase tracking-wider flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--yellow)]" />
+                    <span className="font-mono text-[10px] text-[var(--green)] uppercase tracking-wider flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--green)]" />
                       Open to work
                     </span>
                   </div>
@@ -220,7 +220,7 @@ export const About = () => {
           <RevealOnScroll>
             <p className="section-label mb-4" style={{ color: "var(--black)" }}>Experience</p>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--white)] uppercase leading-[1.05] mb-16">
-              Where I've <span className="text-[var(--yellow)]">worked</span>
+              Where I've <span className="text-[var(--green)]">worked</span>
             </h2>
           </RevealOnScroll>
 
@@ -230,7 +230,7 @@ export const About = () => {
                 <div
                   key={exp.role + exp.company}
                   data-stagger-item
-                  className="bg-[var(--black)] border border-[var(--black-border)] p-6 md:p-8 grid md:grid-cols-[200px_1fr] gap-6 hover:border-[var(--yellow)] transition-colors"
+                  className="bg-[var(--black)] border border-[var(--black-border)] p-6 md:p-8 grid md:grid-cols-[200px_1fr] gap-6 hover:border-[var(--green)] transition-colors"
                 >
                   <div>
                     <p className="font-mono text-[11px] text-[var(--white-muted)] uppercase tracking-wider mb-1">
@@ -242,7 +242,7 @@ export const About = () => {
                     <h3 className="text-lg font-bold text-[var(--white)]">
                       {exp.role}
                     </h3>
-                    <p className="text-sm text-[var(--yellow)] font-semibold mb-4">
+                    <p className="text-sm text-[var(--green)] font-semibold mb-4">
                       {exp.company}
                     </p>
 
@@ -250,14 +250,14 @@ export const About = () => {
                       <div className="space-y-5">
                         {exp.groups.map((group) => (
                           <div key={group.title}>
-                            <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--yellow)] font-semibold mb-2">
+                            <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--green)] font-semibold mb-2">
                               {group.title}
                             </p>
                             <ul className="space-y-1.5">
                               {group.items.map((item, i) => (
                                 <li
                                   key={i}
-                                  className="text-sm text-[var(--white-dim)] leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-px before:bg-[var(--yellow)]"
+                                  className="text-sm text-[var(--white-dim)] leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-px before:bg-[var(--green)]"
                                 >
                                   {item}
                                 </li>
@@ -271,7 +271,7 @@ export const About = () => {
                         {exp.highlights.map((h, i) => (
                           <li
                             key={i}
-                            className="text-sm text-[var(--white-dim)] leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-px before:bg-[var(--yellow)]"
+                            className="text-sm text-[var(--white-dim)] leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-2 before:h-px before:bg-[var(--green)]"
                           >
                             {h}
                           </li>
@@ -313,7 +313,7 @@ export const About = () => {
                   <h3 className="text-lg font-bold text-[var(--white)]">
                     {education.degree}
                   </h3>
-                  <p className="text-sm text-[var(--yellow)] font-semibold mb-1">
+                  <p className="text-sm text-[var(--green)] font-semibold mb-1">
                     {education.school}
                   </p>
                   <p className="text-sm text-[var(--white-muted)]">
@@ -332,7 +332,7 @@ export const About = () => {
           <RevealOnScroll>
             <p className="section-label mb-4">Stack</p>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--white)] uppercase leading-[1.05] mb-16">
-              Tools I <span className="text-[var(--yellow)]">build with</span>
+              Tools I <span className="text-[var(--green)]">build with</span>
             </h2>
           </RevealOnScroll>
 
@@ -342,16 +342,16 @@ export const About = () => {
                 <div
                   key={category}
                   data-stagger-item
-                  className="border border-[var(--black-border)] p-6 hover:border-[var(--yellow)] transition-colors"
+                  className="border border-[var(--black-border)] p-6 hover:border-[var(--green)] transition-colors"
                 >
-                  <p className="font-mono text-[10px] text-[var(--yellow)] uppercase tracking-wider mb-4 font-semibold">
+                  <p className="font-mono text-[10px] text-[var(--green)] uppercase tracking-wider mb-4 font-semibold">
                     {category}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {items.map((item) => (
                       <span
                         key={item}
-                        className="font-mono text-xs text-[var(--white-dim)] border border-[var(--black-border)] px-2.5 py-1.5 hover:text-[var(--yellow)] hover:border-[var(--yellow)]/40 transition-colors"
+                        className="font-mono text-xs text-[var(--white-dim)] border border-[var(--black-border)] px-2.5 py-1.5 hover:text-[var(--green)] hover:border-[var(--green)]/40 transition-colors"
                       >
                         {item}
                       </span>
@@ -370,7 +370,7 @@ export const About = () => {
                 {exploring.map((item) => (
                   <span
                     key={item}
-                    className="text-sm font-semibold text-[var(--black)] bg-[var(--yellow)] px-4 py-2 uppercase tracking-wider"
+                    className="text-sm font-semibold text-[var(--black)] bg-[var(--green)] px-4 py-2 uppercase tracking-wider"
                   >
                     {item}
                   </span>
@@ -387,7 +387,7 @@ export const About = () => {
           <RevealOnScroll>
             <p className="section-label mb-4" style={{ color: "var(--black)" }}>Writing</p>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--white)] uppercase leading-[1.05] mb-12">
-              Blog <span className="text-[var(--yellow)]">posts</span>
+              Blog <span className="text-[var(--green)]">posts</span>
             </h2>
           </RevealOnScroll>
 
@@ -402,10 +402,10 @@ export const About = () => {
                   data-stagger-item
                   className="flex items-center justify-between gap-4 py-5 border-b border-[var(--white)]/20 group"
                 >
-                  <span className="text-sm md:text-base font-medium text-[var(--white)] group-hover:text-[var(--yellow)] transition-colors">
+                  <span className="text-sm md:text-base font-medium text-[var(--white)] group-hover:text-[var(--green)] transition-colors">
                     {blog.title}
                   </span>
-                  <FaArrowUpRightFromSquare className="text-xs text-[var(--white)]/40 group-hover:text-[var(--yellow)] transition-colors flex-shrink-0" />
+                  <FaArrowUpRightFromSquare className="text-xs text-[var(--white)]/40 group-hover:text-[var(--green)] transition-colors flex-shrink-0" />
                 </a>
               ))}
             </div>

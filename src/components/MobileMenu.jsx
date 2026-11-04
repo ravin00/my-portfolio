@@ -20,7 +20,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
     >
       <div className="px-4 h-full flex flex-col">
         <div className="flex items-center justify-between h-16">
-          <span className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[var(--yellow)]">
+          <span className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[var(--green)]">
             RAVIN BANDARA<span className="text-[var(--white-muted)]">&reg;</span>
           </span>
           <button
@@ -38,7 +38,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
               key={item.href}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className={`text-5xl font-black uppercase text-[var(--white)] tracking-tight py-1 transition-all duration-500 hover:text-[var(--yellow)] ${
+              className={`text-5xl font-black uppercase text-[var(--white)] tracking-tight py-1 transition-all duration-500 hover:text-[var(--green)] ${
                 menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
               style={{ transitionDelay: menuOpen ? `${i * 50 + 100}ms` : "0ms" }}
@@ -49,13 +49,13 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         </nav>
 
         <div className="pb-8 flex items-center gap-6 border-t border-[var(--white)]/20 pt-6">
-          <a href="https://github.com/ravin00" target="_blank" rel="noopener noreferrer" className="text-[var(--white)]/60 hover:text-[var(--yellow)] transition-colors">
+          <a href="https://github.com/ravin00" target="_blank" rel="noopener noreferrer" className="text-[var(--white)]/60 hover:text-[var(--green)] transition-colors">
             <FaGithub className="text-lg" />
           </a>
-          <a href="https://www.linkedin.com/in/ravin-bandara-/" target="_blank" rel="noopener noreferrer" className="text-[var(--white)]/60 hover:text-[var(--yellow)] transition-colors">
+          <a href="https://www.linkedin.com/in/ravin-bandara-/" target="_blank" rel="noopener noreferrer" className="text-[var(--white)]/60 hover:text-[var(--green)] transition-colors">
             <FaLinkedin className="text-lg" />
           </a>
-          <a href="https://medium.com/@ravinbandara76" target="_blank" rel="noopener noreferrer" className="text-[var(--white)]/60 hover:text-[var(--yellow)] transition-colors">
+          <a href="https://medium.com/@ravinbandara76" target="_blank" rel="noopener noreferrer" className="text-[var(--white)]/60 hover:text-[var(--green)] transition-colors">
             <FaMedium className="text-lg" />
           </a>
         </div>

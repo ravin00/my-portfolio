@@ -34,7 +34,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <a
             href="#home"
-            className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[var(--yellow)]"
+            className="font-mono text-xs font-semibold tracking-[0.2em] uppercase text-[var(--green)]"
           >
             RAVIN BANDARA<span className="text-[var(--white-muted)]">&reg;</span>
           </a>
@@ -44,14 +44,14 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm text-[var(--white-dim)] hover:text-[var(--yellow)] transition-colors font-medium"
+                className="text-sm text-[var(--white-dim)] hover:text-[var(--green)] transition-colors font-medium"
               >
                 {item.label}
               </a>
             ))}
             <a
               href="#contact"
-              className="text-sm font-semibold text-[var(--black)] bg-[var(--yellow)] px-5 py-2.5 hover:bg-[var(--yellow-dim)] transition-colors"
+              className="text-sm font-semibold text-[var(--black)] bg-[var(--green)] px-5 py-2.5 hover:bg-[var(--green-dim)] transition-colors"
             >
               Let's Talk
             </a>
